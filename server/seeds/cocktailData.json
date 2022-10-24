@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Old-fashioned",
+        "ingredients": "bourbon, bitters, simple syrup, orange peel",
+        "instructions": "Large ice cube in glass, stir ingredients for 30 seconds, twist peel"
+    },
+    {
+        "name": "Margarita",
+        "ingredients": "tequila, agave, lime juice, salt",
+        "instructions": "Salt the rim, shake the drink, fiesta"
+    },
+    {
+        "name": "Vodka-Slime",
+        "ingredients": "Vodka, sprite, lime",
+        "instructions": "Party"
+    }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "James",
+    "email": "j@test.com",
+    "password": "testpw",
+    "cocktails": {
+      "_id": "6356b8ec1f2af4f044c3eb94",
+    "name": "Margarita",
+    "ingredients": "tequila, agave, lime juice, salt",
+    "instructions": "Salt the rim, shake the drink, fiesta",
+    "views": 0
+    }
+  },
+  {
+    "name": "Fatih",
+    "email": "f@test.com",
+    "password": "testpw"
+  },
+  {
+    "name": "Chris",
+    "email": "c@test.com",
+    "password": "testpw"
+  },
+  {
+    "name": "Ryan",
+    "email": "r@test.com",
+    "password": "testpw"
+  }
+]
