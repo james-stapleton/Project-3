@@ -1,6 +1,11 @@
 import React from "react";
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
+import MostViewedDrinks from "./pages/MostViewedCocktails";
+import CocktailRankings from "./pages/CocktailRankings";
+import SavedDrinks from "./pages/SavedDrinks";
+import UploadDrink from "./pages/UploadDrink";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
@@ -17,6 +22,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          
+          <Route path="/MostViewedDrinks" element={<MostViewedDrinks />} />
+
+          <Route path="/CocktailRankings" element={<CocktailRankings />} />
+
+          <Route path="/SavedDrinks" element={<SavedDrinks />} />
+
+          <Route path="/UploadDrink" element={<UploadDrink />} />
+
+          <Route path="/Login" element={<Login />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
