@@ -7,7 +7,8 @@
     {
         "name": "Margarita",
         "ingredients": "tequila, agave, lime juice, salt",
-        "instructions": "Salt the rim, shake the drink, fiesta"
+        "instructions": "Salt the rim, shake the drink, fiesta",
+        "image": "placeholder.png"
     },
     {
         "name": "Vodka-Slime",
