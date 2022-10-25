@@ -9,32 +9,50 @@ const typeDefs = gql`
     cocktails: [Cocktails]
   }
 
+  type Ratings {
+    email: String!
+    value: Int
+  }
+
   type Cocktails {
     _id: ID!
     name: String!
     ingredients: String!
     instructions: String!
-    rating: Float
+    rating: [Ratings]
     views: Int
+    avgRating: Float
+    image: String
   }
 
   input CocktailInput {
     _id: ID!
-    name: String!
-    ingredients: String!
+  }
+
+  input RatingInput {
+    email: String!
+    value: Int
   }
 
   type Query {
     users: [Users]
+    user(name: String!): Users
     cocktails: [Cocktails]
     cocktail(name: String!): Cocktails
+    userEmail(email: String!): Users
+    cocktailByIng(string: String!): [Cocktails]
+    cocktailRating(name: String!): Cocktails 
+
   }
 
   type Mutation {
     createUser(name: String!, email: String!, password: String!): Users
-    createCocktail(name: String!, ingredients: String!, instructions: String!): Cocktails
+    createCocktail(name: String!, ingredients: String!, instructions: String!, image: String): Cocktails
     saveCocktail(email: String!, cocktails: CocktailInput): Users
+    upsertCocktailRating(name: String!, rating: RatingInput): Cocktails
   }
 `;
 
 module.exports = typeDefs;
+
+

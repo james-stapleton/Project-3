@@ -2,7 +2,11 @@
     {
         "name": "Old-fashioned",
         "ingredients": "bourbon, bitters, simple syrup, orange peel",
-        "instructions": "Large ice cube in glass, stir ingredients for 30 seconds, twist peel"
+        "instructions": "Large ice cube in glass, stir ingredients for 30 seconds, twist peel",
+        "rating": [
+            {"email": "j@test.com", "value": 5}, {"email": "r@test.com", "value": 4},
+            {"email": "f@test.com", "value": 4}
+        ]
     },
     {
         "name": "Margarita",
