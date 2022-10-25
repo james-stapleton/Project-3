@@ -28,7 +28,7 @@ const resolvers = {
     // get the aray of ratings for a cocktail
     cocktailRating: async (parent, { name }) => {
       return Cocktails.findOne({ name: name }).select("name rating");
-    },
+    }
   },
   Mutation: {
     //Create a user. Required args are name, email, password
