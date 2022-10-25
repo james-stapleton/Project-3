@@ -44,9 +44,26 @@ const resolvers = {
     },
     upsertCocktailRating: async (parent, { name, rating } ) => {
         console.log(rating);
-        let query = {$push: {rating: rating}}
-        const newRating = await Cocktails.findOneAndUpdate({name: name, "rating.email": { '$ne': rating.email}}, query, {upsert: true});
-        return newRating;
+        const currentRatings = await Cocktails.findOne({name: name});
+        const ratingArray = currentRatings.rating;
+        console.log(ratingArray);
+        let push = true;
+        for (let i = 0; i<ratingArray.length; i++) {
+          console.log("Push?", push);
+          console.log(`current rating email: ${ratingArray[i].email} \n new rating email: ${rating.email}`)
+          if (ratingArray[i].email === rating.email) {
+            currentRatings.rating[i] = rating;
+            push = false;
+            console.log(`Push is ${push}:Update! break the loop!`);
+            break;
+          }
+        }
+        push ? currentRatings.rating.push(rating) : console.log("no push");
+        const newRatings = await currentRatings.save();
+        console.log(newRatings.rating);
+        // let query = {$push: {rating: rating}}
+        // const newRating = await Cocktails.findOneAndUpdate({name: name, "rating.email": { '$ne': rating.email}}, query, {upsert: true});
+        // return newRating;
     }
 
     // createVote: async (parent, { _id, techNum }) => {
