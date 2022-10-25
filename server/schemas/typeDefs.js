@@ -9,6 +9,12 @@ const typeDefs = gql`
     cocktails: [Cocktails]
   }
 
+  input UserInput {
+    name: String
+    email: String
+    password: String
+  }
+
   type Ratings {
     email: String!
     value: Int
@@ -29,6 +35,14 @@ const typeDefs = gql`
     name: String!
   }
 
+  input CocktailUpdate {
+    name: String
+    ingredients: String
+    instructions: String
+    image: String
+    views: Int
+  }
+
   input CocktailInputID {
     _id: ID!
   }
@@ -42,7 +56,6 @@ const typeDefs = gql`
     users: [Users]
     user(name: String!): Users
     userID(_id: ID!): Users
-    updateUser(_id: ID!): Users
     cocktails: [Cocktails]
     cocktail(name: String!): Cocktails
     userEmail(email: String!): Users
@@ -52,9 +65,15 @@ const typeDefs = gql`
 
   type Mutation {
     createUser(name: String!, email: String!, password: String!): Users
+    updateUser(_id: ID!, args: UserInput): Users
+    deleteUser(_id: ID!): Users
     createCocktail(name: String!, ingredients: String!, instructions: String!, image: String): Cocktails
+    updateCocktail(_id: ID!, args: CocktailUpdate): Cocktails
+    deleteCocktail(_id: ID!): Cocktails
     saveCocktail(email: String!, cocktails: CocktailInput): Users
     saveCocktailID(email: String!, cocktails: CocktailInputID): Users
+    unSaveCocktail(email: String!, _id: ID!): Users
+    unSaveCocktailName(email: String!, name: String!): Users
     upsertCocktailRating(name: String!, rating: RatingInput): Cocktails
   }
 `;
@@ -62,3 +81,4 @@ const typeDefs = gql`
 module.exports = typeDefs;
 
 
+// 
