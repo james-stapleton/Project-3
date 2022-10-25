@@ -1,17 +1,266 @@
 [
     {
-        "name": "Old-fashioned",
-        "ingredients": "bourbon, bitters, simple syrup, orange peel",
-        "instructions": "Large ice cube in glass, stir ingredients for 30 seconds, twist peel"
+        "name": "Vodka-Slime ",
+        "ingredients": "1oz Vodka, 1oz Lime Juice, Sprite",
+        "instructions": "Add vodka, lime juice and sprite to the top in a highball glass with crushed ice. Stir and serve."
+    },
+    {
+        "name": "Long-Island-Iced-Tea",
+        "ingredients": "0.5oz Vodka, 0.5oz Gin, 0.5oz Triple Sec, 0.5oz Tequila, 0.5oz White Rum, 1oz Lemon Juice, Coke",
+        "instructions": "Add all ingredients into a highball glass with ice and top up with coke. Stir gently. Garnish with a lemon slice and serve."
+    },
+    {
+        "name": "Old-Fashioned",
+        "ingredients": "1.5oz Bourbon, Few Dashes of Angostura Bitters, 1 Sugar Cube",
+        "instructions": "Muddle the sugar with the Angostura bitters and a few splashes of water in an old fashioned glass. Fill the glass with ice and add the bourbon. Stir gently. Garnish with an orange slice and a cherry and serve."
+    },
+    {
+        "name": "Moscow-Mule",
+        "ingredients": "1.5oz Vodka, 0.5oz Lime Juice, 4oz Ginger Beer",
+        "instructions": "Add the vodka and lime juice to a highball glass with ice. Top up with ginger beer, garnish with a lime slice and serve."
+    },
+    {
+        "name": "Negroni",
+        "ingredients": "1oz Gin, 1oz Campari, 1oz Sweet Vermouth",
+        "instructions": "Add all the ingredients directly into a lowball glass with ice and stir. Garnish with an orange slice and serve."
+    },
+    {
+        "name": "Mojito",
+        "ingredients": "1.5oz White Rum, 0.75oz Lime Juice, 10 Mint Leaves, 2 teaspoons of Sugar, Soda Water",
+        "instructions": "In the bottom of a highball glass, muddle the mint leaves with the sugar and lime juice to release the oils from the mint leaves. Next add a splash of soda water and fill up the glass with crushed ice. Add the rum, top up with the soda water and give it a stir. Garnish with a sprig of mint and a slice of lime and serve"
+    },
+    {
+        "name": "Whiskey Sour",
+        "ingredients": "1.5oz Bourbon, 1.5oz Lemon Juice, 0.75oz Egg Whites, 0.75oz Simple Syrup",
+        "instructions": "Pour all ingredients into a cocktail shaker with ice. Shake well then strain into a chilled old fashioned glass. Garnish with an orange slice and a cherry and serve."
     },
     {
         "name": "Margarita",
-        "ingredients": "tequila, agave, lime juice, salt",
-        "instructions": "Salt the rim, shake the drink, fiesta"
+        "ingredients": "2oz Silver Tequila, 1.5oz Triple Sec, 1oz Lime Juice, Salt",
+        "instructions": "Rim the edge of a cocktail glass with salt by coating the edge with lime juice and dipping into the salt. Add the other ingredients to a cocktail shaker with a few cubes of ice. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into a cocktail glass and serve."
     },
     {
-        "name": "Vodka-Slime",
-        "ingredients": "Vodka, sprite, lime",
-        "instructions": "Party"
+        "name": "Vesper",
+        "ingredients": "3oz Gin, 1oz Vodka, 0.5oz Lillet Blanc",
+        "instructions": "Add all ingredients to a cocktail shaker with ice. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into a chilled cocktail glass, garnish with a lemon peel and serve."
+    },
+    {
+        "name": "Gimlet",
+        "ingredients": "2oz Gin, 0.5oz Simple Syrup, 0.5 oz Lime Juice,",
+        "instructions": "Add all ingredients to a cocktail shaker with ice. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into a chilled cocktail glass. Garnish with a lime slice and serve."
+    },
+    {
+        "name": "Dry-Martini ",
+        "ingredients": "2oz Vodka, 0.5oz Dry Vermouth",
+        "instructions": "Add the ingredients into a mixing glass with ice cubes. Stir well then strain into a chilled cocktail glass. Garnish with an olive and a squeeze of lemon peel oil and serve." 
+    },
+    {
+        "name": "Aperol-Spritz ",
+        "ingredients": "1.5oz Aperol, 2oz Prosecco, 0.5oz Simple Syrup",
+        "instructions": "Add vodka, lime juice and sprite to the top in a highball glass with crushed ice. Stir and serve." 
+    },
+    {
+        "name": "Aperol-Sour ",
+        "ingredients": "2oz Aperol, 1oz Lemon Juice, 0.5oz Simple Syrup",
+        "instructions": "Add all ingredients to a cocktail shaker with ice. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into highball glass over ice and serve." 
+    },
+    {
+        "name": "Espresso-Martini ",
+        "ingredients": "1oz Vodka, 1oz Kahlua, 0.5oz Simple Syrup, 1 Espresso Shot",
+        "instructions": "Pour all ingredients into a cocktail shaker filled with ice. Shake vigorously; it should be somewhat frothy. Strain into a chilled cocktail glass and serve." 
+    },
+    {
+        "name": "Manhattan-Sweet ",
+        "ingredients": "2oz Bourbon, 1oz Martini Rosso, Dash of Angostura Bitters",
+        "instructions": "Add all ingredients together with ice to a cocktail shaker then strain into a short stemmed glass. Garnish by expressing the oils from an orange peel and a cocktail cherry, and serve." 
+    },
+    {
+        "name": "Manhattan-Dry ",
+        "ingredients": "2oz Bourbon, 1oz Dry Vermouth, Dash of Angostura Bitters",
+        "instructions": "Add all ingredients together with ice to a cocktail shaker then strain into a short stemmed glass. Garnish by expressing the oils from an lemon peel twist and serve." 
+    },
+    {
+        "name": "Dirty-Old-Manhattan ",
+        "ingredients": "1.5oz Rye Whiskey, 1oz Sweet Vermouth, 0.25oz Orange Juice, Dash of Orange Bitters, Teaspoon of Cherry Juice",
+        "instructions": "Pour the rye whiskey into a cocktail shaker. Combine with the fresh orange juice, sweet vermouth, cherry juice, and bitters. Fill with ice and shake vigorously for about six seconds. Strain into a chilled cocktail glass. Take an orange rind and spritz a good amount of orange perfume around the rim of the glass. Garnish with the orange rind and a cherry, and serve." 
+    },
+    {
+        "name": "Daiquiri",
+        "ingredients": "2oz White Rum, 0.75oz Lime Juice, 2 teaspoons of sugar",
+        "instructions": "Add all ingredients to a cocktail shaker with ice. Stir well to dissolve the sugar. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into a chilled cocktail glass and serve." 
+    },
+    {
+        "name": "Dainty-Charlie ",
+        "ingredients": "1oz Amaretto, 1oz Cream Soda",
+        "instructions": "Pour amaretto into an old-fashioned glass half-filled with ice. Add cream soda to taste. Stir and serve." 
+    },
+    {
+        "name": "Cosmopolitan ",
+        "ingredients": "1.5oz Lemon Vodka, 0.5oz Triple Sec, 0.5oz Lime Juice, 1oz Cranberry Juice",
+        "instructions": "Add all the ingredients to a cocktail shaker with plenty of ice, and shake until the outside of the shaker becomes frosted. Strain into a cocktail glass and garnish with a twist of lemon peel before serving." 
+    },
+    {
+        "name": "Bellini ",
+        "ingredients": "3.5oz Prosecco, 3.5oz Peach Juice",
+        "instructions": "Add the peach juice into a mixing glass and add the Prosecco. Stir gently. Pour into a champagne flute and serve." 
+    },
+    {
+        "name": "Aviation",
+        "ingredients": "2oz Gin, 0.75oz Lemon Juice, 0.5oz Maraschino Liquer, 0.25oz Creme de Violette",
+        "instructions": "Add all the ingredients to a cocktail shaker with ice and shake well. Strain into a chilled cocktail glass. Garnish with a maraschino cherry and serve." 
+    },
+    {
+        "name": "Sazerac",
+        "ingredients": "2oz Cognac, 0.5 Absinthe, 1 Sugar Cube, 2 Dashes of Angostura Bitters",
+        "instructions": "Take a chilled lowball glass and swirl the absinthe around the sides to coat the glass, and fill with ice. In a mixing glass muddle the bitters and sugar, then add the cognac and stir to combine. Discard the ice and excess liquid from the glass and pour in the mixed drink. Garnish with a lemon peel and serve." 
+    },
+    {
+        "name": "Amaretto-Sour",
+        "ingredients": "2oz Amaretto, 1oz Lemon Juice, 0.5oz Egg Whites, Dash of Angostura Bitters",
+        "instructions": "Add the amaretto, lemon juice, egg white and bitters to a cocktail shaker together with ice. Shake until the outside of the shaker is frosted, then strain into an old fashioned glass with ice. Garnish with a lemon slice and a maraschino cherry and serve." 
+    },
+    {
+        "name": "Pina-Colada ",
+        "ingredients": "3oz White Rum, 1oz Coconut Cream, 0.75oz Pineapple Juice ",
+        "instructions": "Add all ingredients to a blender with ice and blend until smooth. Pour into a hurricane glass. Garnish with a slice of pineapple and a cocktail cherry before serving." 
+    },
+    {
+        "name": "Dark-N-Stormy",
+        "ingredients": "2oz Dark Rum, 1 Lime Wedge, 3.5oz Ginger Beer",
+        "instructions": "Put ice and lime into a tall glass. Muddle a lime wedge lightly to release some juice. Pour the rum and ginger beer into glass and stir before serving." 
+    },
+    {
+        "name": "Mai-Tai",
+        "ingredients": "1oz White Rum, 1oz Dark Jamaican Rum, 1oz Lime Juice, 0.5oz Orange Curacao, 0.5oz Orgeat Syrup",
+        "instructions": "Add all ingredients to a cocktail shaker with ice. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into a lowball glass. Garnish with a pineapple spear, mint leaves and a lime peel, and serve." 
+    },
+    {
+        "name": "French-75",
+        "ingredients": "4oz Champagne, 1oz Gin, 0.5oz Lemon Juice, 0.5oz Simple Syrup",
+        "instructions": "Stir the sugar syrup, lemon juice and gin into an ice-filled mixing glass. Strain into a champagne flute and top up with champagne. Garnish with a lemon slice and serve." 
+    },
+    {
+        "name": "Americano",
+        "ingredients": "1oz Campari, 1oz Sweet Vermouth, Splash of Soda Water",
+        "instructions": "Mix the Campari and vermouth directly in a lowball glass filled with ice cubes. Add soda water and stir. Garnish with half an orange slice and a strip of lemon peel and serve." 
+    },
+    {
+        "name": "Bloody-Mary",
+        "ingredients": "1.5oz Vodka, 0.5oz Lemon Juice, Sprinkle of Pepper, Dash of Tabasco Sauce, 3oz Tomato Juice, 2 Dashes of Worcestershire Sauce, Sprinkle of Celery Salt",
+        "instructions": "In a mixing glass with ice add all the ingredients. Stir gently to mix before pouring into a lowball glass. Garnish with a stick of celery and serve." 
+    },
+    {
+        "name": "Paloma",
+        "ingredients": "2oz Tequila, 2oz Grapefruit Juice, 2oz Club Soda, 0.5oz Lime Juice, 0.25oz Simple Syrup",
+        "instructions": "Using a highball glass, salt the rim. Combine the tequila, grapefruit juice, club soda, agave nectar and lime juice. Fill the remainder of the glass with ice. Garnish with a grapefruit wedge and serve." 
+    },
+    {
+        "name": "Boulevardier",
+        "ingredients": "1oz Campari, 1oz Sweet Vermouth, 1.5oz Bourbon",
+        "instructions": "Pour all ingredients into a shaker with ice. Shake well and strain into chilled cocktail glass. Garnish with an orange wedge and serve." 
+    },
+    {
+        "name": "Dirty-Martini",
+        "ingredients": "2oz Vodka, 0.25oz Olive Juice, 0.25oz Dry Vermouth",
+        "instructions": "Add all the ingredients into a cocktail shaker with ice. Shake well and strain into a cocktail glass. Add olives on a cocktail stick as a garnish and serve." 
+    },
+    {
+        "name": "Mimosa",
+        "ingredients": "2.5oz Prosecco, 2.5oz Orange Juice",
+        "instructions": "Add orange juice to the bottom of a champagne flute before topping up with chilled Prosecco. Garnish with an orange peel twist and serve."
+    },
+    {
+        "name": "Tom-Collins",
+        "ingredients": "1.5oz London Dry Gin, 2oz Club Soda, 0.5oz Simple Syrup, 1oz Lemon Juice",
+        "instructions": "Add all the ingredients except the soda into a highball glass with ice. Stir and top up with the soda. Garnish with a maraschino cherry and a lemon slice and serve." 
+    },
+    {
+        "name": "Sidecar",
+        "ingredients": "1oz Brandy, 0.5oz Triple Sec, 0.5oz Lemon Juice",
+        "instructions": "Add all the ingredients into a cocktail shaker with ice and shake well until the outside of the shaker becomes frosted. Strain into a chilled cocktail glass and serve." 
+    },
+    {
+        "name": "Mint-Julep",
+        "ingredients": "2oz Bourbon, 10 Mint Leaves, 1 teaspoon of Sugar",
+        "instructions": "In the bottom of a lowball glass, muddle the mint leaves with the sugar and two teaspoons of water. Add the bourbon and fill the glass with crushed ice. Stir the drink and garnish with a sprig of mint, and serve." 
+    },
+    {
+        "name": "Martinez",
+        "ingredients": "1.5oz Gin, 1.5oz Sweet Vermouth, 2 Dashes of Angostura Bitters, 1 teaspoon of Maraschino Cherry Liquer",
+        "instructions": "Add all the ingredients into a mixing glass with ice and stir to combine and chill the ingredients. Strain into a chilled cocktail glass, garnish with a lemon peel and serve." 
+    },
+    {
+        "name": "Penicillin",
+        "ingredients": "2oz Blended Scotch Whiskey, 0.75oz Lemon Juice, 0.25oz Ginger Liquier, 0.5oz Honey",
+        "instructions": "Add all the ingredients into a cocktail shaker with ice. Strain into an ice-filled rocks glass. Garnish with a lemon peel and serve." 
+    },
+    {
+        "name": "Corpse-Reviver-No.1",
+        "ingredients": "1oz Cognac, 1oz Calvados, 0.5oz Sweet Vermouth",
+        "instructions": "Stir all the ingredients in a mixing glass with ice. Strain into a chilled cocktail glass and serve." 
+    },
+    {
+        "name": "Corpse-Reviver-No.2",
+        "ingredients": "0.75oz London Dry Gin, 0.75oz Lillet Blanc, 0.75oz Orange Liquer, 0.75oz Lemon Juice, Absinthe to rinse",
+        "instructions": "Rinse the inside of a chilled cocktail glass with absinthe and dsicard the excess. In a shaker add all the remaining ingredients with ice and skae until well-chilled. Strain into the prepared glass and serve." 
+    },
+    {
+        "name": "Clover-Club",
+        "ingredients": "1.5oz London Dry Gin, 0.25oz Sweet Red Vermouth, 0.25oz Dry Vermouth, 0.25 Lemon Juice, 0.25oz Simple Syrup, 1 Egg White, 5 Raspberries",
+        "instructions": "Pour all ingredients into a shaker with ice. Shake well then strain into a chilled cocktail glass. Garnish with a cherry and serve." 
+    },
+    {
+        "name": "Pisco-Sour",
+        "ingredients": "2oz Pisco, 1oz Lime or Lemon Juice, 0.5oz Simple Syrup, 1 Egg White, 1-2 Dashes of Angostura Bitters",
+        "instructions": "" 
+    },
+    {
+        "name": "Vieux-Carre",
+        "ingredients": "1oz Cognac, 1oz Bourbon, ",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
+    },
+    {
+        "name": "",
+        "ingredients": "",
+        "instructions": "" 
     }
-]
