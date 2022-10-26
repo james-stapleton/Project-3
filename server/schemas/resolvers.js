@@ -1,5 +1,5 @@
 const { Users, Cocktails } = require("../models");
-const {signToken} = require("../utils/auth")
+const {signToken } = require("../utils/auth")
 const AuthenticationError = require("apollo-server-express")
 
 const resolvers = {
@@ -37,10 +37,11 @@ const resolvers = {
     createUser: async (parent, args) => {
       const user = await Users.create(args);
       const token = signToken(user);
+      console.log("Token:",token)
       return {user, token};
     },
     login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+      const user = await Users.findOne({ email });
 
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
@@ -53,6 +54,7 @@ const resolvers = {
       }
 
       const token = signToken(user);
+      console.log(token, user);
       return { token, user };
     },
     // Update User
