@@ -47,7 +47,7 @@ query CocktailByIng($string: String!) {
         <input
           id="search-ingredient-input"
           className="form-input"
-          placeholder="e.g. Margarita"
+          placeholder="e.g. Lime"
           type = "text"
           onChange = {handleChange}
         //   value = {formData.city}
@@ -57,7 +57,9 @@ query CocktailByIng($string: String!) {
         
         data.cocktailByIng.map((cocktail) => {
             console.log(cocktail)
-            return <p>{cocktail.name}</p>
+            return <p>{cocktail.name}
+            {cocktail.ingredients}
+            {cocktail.image}</p>
         })
         
         : <p></p>
