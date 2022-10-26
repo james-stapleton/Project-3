@@ -52,6 +52,11 @@ const typeDefs = gql`
     value: Int
   }
 
+  type Auth {
+    token: ID!
+    user: Users
+  }
+
   type Query {
     users: [Users]
     user(name: String!): Users
@@ -65,6 +70,7 @@ const typeDefs = gql`
 
   type Mutation {
     createUser(name: String!, email: String!, password: String!): Users
+    login(email: String!, password: String!): Auth
     updateUser(_id: ID!, args: UserInput): Users
     deleteUser(_id: ID!): Users
     createCocktail(name: String!, ingredients: String!, instructions: String!, image: String): Cocktails
