@@ -3,8 +3,6 @@ import {useQuery, gql} from '@apollo/client';
 import {useParams} from 'react-router-dom';
 
 
-
-
 export default function Recipe (props) {
 
     const {name} = useParams();
@@ -27,7 +25,6 @@ export default function Recipe (props) {
     if (loading) return 'loading...';
     if (error) return <pre>{error.message}</pre>
 
-    console.log(data);
 
     return (
         <div>

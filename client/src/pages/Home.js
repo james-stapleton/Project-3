@@ -1,11 +1,16 @@
 import React from 'react';
+import NameForm from '../components/NameForm';
 // import { Link } from 'react-router-dom';
 // import { useQuery } from '@apollo/client';
 // import { QUERY_MATCHUPS } from '../utils/queries';
+import {useQuery, gql} from '@apollo/client';
+import {useParams} from 'react-router-dom';
 
 const Home = () => {
     return (
 <div>
+
+  <NameForm />
   <div>
     <form id="search-form">
       <label id="search-label" htmlFor="search-input">Search for a City:</label>

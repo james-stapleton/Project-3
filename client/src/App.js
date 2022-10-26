@@ -19,11 +19,6 @@ const client = new ApolloClient({
 function App() {
 
 
-  function loadDrink(e) {
-    console.log(e.target.id)
-    
-}
-
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -33,7 +28,7 @@ function App() {
           
           <Route path="/MostViewedDrinks" element={<MostViewedDrinks />} />
 
-          <Route path="/CocktailRankings" element={<CocktailRankings loadDrink = {loadDrink} />} />
+          <Route path="/CocktailRankings" element={<CocktailRankings />} />
 
           <Route path="/SavedDrinks" element={<SavedDrinks />} />
 
@@ -41,7 +36,7 @@ function App() {
 
           <Route path="/Login" element={<Login />} />
 
-          <Route path = 'Recipe/:name' element = {<Recipe />} /> 
+          <Route path = '/Recipe/:name' element = {<Recipe />} /> 
 
           <Route path="*" element={<NotFound />} />
         </Routes>
