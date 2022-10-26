@@ -151,7 +151,6 @@ const resolvers = {
       // We have now either updated or inserted our new rating, so save the cocktail to the database
       push ? currentRatings.rating.push(rating) : console.log("no push");
       const newRatings = await currentRatings.save();
-      console.log(newRatings.rating);
     },
   },
 };
