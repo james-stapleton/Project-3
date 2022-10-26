@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function NameForm() {
   const [formData, setFormData] = React.useState("");
@@ -190,10 +190,11 @@ export default function NameForm() {
           Search
         </button>
         {data ? (
+          <Link to = {`/Recipe/${data.cocktail.name}`}>
           <p>{`${data.cocktail.name}
         ${data.cocktail.ingredients}
         ${data.cocktail.instructions}`}</p>
-        ) : (
+        </Link>) : (
           <p></p>
         )}
       </form>

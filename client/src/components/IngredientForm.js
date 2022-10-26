@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 
 export default function NameForm() {
@@ -57,9 +57,12 @@ query CocktailByIng($string: String!) {
         
         data.cocktailByIng.map((cocktail) => {
             console.log(cocktail)
-            return <p>{cocktail.name}
+            return (
+            <Link to = {`/Recipe/${cocktail.name}`}>
+             <p>{cocktail.name}
             {cocktail.ingredients}
             {cocktail.image}</p>
+            </Link>)
         })
         
         : <p></p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function NameForm() {
@@ -52,9 +53,13 @@ query Cocktails($name: String!) {
         //   value = {formData.city}
         />
         <button onClick={handleSearch} className="button">Search</button>
-        {data ? <p>{`${data.cocktail.name}
+        {data ?
+        <Link to = {`/Recipe/${data.cocktail.name}`}>
+         <p>{`${data.cocktail.name}
         ${data.cocktail.ingredients}
-        ${data.cocktail.instructions}`}</p> : <p></p> }
+        ${data.cocktail.instructions}`}</p>
+        </Link>
+         : <p></p> }
       </form>
     </div>
   );
