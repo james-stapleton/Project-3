@@ -1,6 +1,6 @@
 const { Users, Cocktails } = require("../models");
-const {signToken } = require("../utils/auth")
-const AuthenticationError = require("apollo-server-express")
+const {signToken} = require("../utils/auth")
+const {AuthenticationError} = require("apollo-server-express")
 
 const resolvers = {
   Query: {
@@ -37,22 +37,22 @@ const resolvers = {
     createUser: async (parent, args) => {
       const user = await Users.create(args);
       const token = signToken(user);
-      console.log("Token:",token)
+      console.log("token");
       return {user, token};
     },
     login: async (parent, { email, password }) => {
       const user = await Users.findOne({ email });
-
+      console.log(password)
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
       }
 
       const correctPw = await user.isCorrectPassword(password);
-
+      console.log(correctPw)
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
+      
       const token = signToken(user);
       console.log(token, user);
       return { token, user };
