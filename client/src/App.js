@@ -7,6 +7,7 @@ import SavedDrinks from "./pages/SavedDrinks";
 import UploadDrink from "./pages/UploadDrink";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Recipe from './pages/Recipe'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
@@ -16,6 +17,8 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -32,6 +35,8 @@ function App() {
           <Route path="/UploadDrink" element={<UploadDrink />} />
 
           <Route path="/Login" element={<Login />} />
+
+          <Route path = '/Recipe/:name' element = {<Recipe />} /> 
 
           <Route path="*" element={<NotFound />} />
         </Routes>

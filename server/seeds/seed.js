@@ -26,14 +26,9 @@ db.once('open', async () => {
   })
 
   const savedCocktail = await newCocktail.save();
-  console.log(savedCocktail);
-
   const userUpdate = await Users.findOne({ name: 'James' })
-  console.log(userUpdate)
   userUpdate.cocktails.push(savedCocktail._id)
   const savedUser = await userUpdate.save()
-  console.log(savedUser)
-  
   process.exit(0)
 
   

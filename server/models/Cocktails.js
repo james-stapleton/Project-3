@@ -42,7 +42,6 @@ const cocktailSchema = new Schema(
 cocktailSchema.virtual("avgRating").get(function () {
   // Function that will be passed to map to get all the rating values
   mapFunction = (ratingItem) => ratingItem.value;
-  console.log(this.rating)
   
   const ratingArray = this.rating.map(mapFunction);
   // Check if there's anything in the array
@@ -72,6 +71,5 @@ const Cocktails = model("Cocktails", cocktailSchema);
 
 // test.avgRating;
 
-// console.log(test.avgRating);
 
 module.exports = Cocktails;
