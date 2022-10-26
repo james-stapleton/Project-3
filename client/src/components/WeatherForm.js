@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
-
 export default function NameForm() {
   const [formData, setFormData] = React.useState("");
 
@@ -10,165 +9,167 @@ export default function NameForm() {
 
   const [drinkName, setDrinkName] = React.useState();
 
-
   function handleChange(event) {
     setFormData(event.target.value);
   }
-const NAME_QUERY = gql`
-query Cocktails($name: String!) {
-  cocktail(name: $name) {
-    name
-    ingredients
-    instructions
-    avgRating
-    views
-    image
-  }
-}
-`;
-    const [search, {loading, data, error}] = useLazyQuery(NAME_QUERY, {
-        variables : {name: drinkName}
-      });
-
-      var currentDrink = ''
-
-      function drinkRec(currentTemp) {
-        var drinksArray = []; //empty array that will be filled with curated drink suggestions
-        var drinkIndex; //index variable that will be randomly assigned to select a drink from the array
-        var drink = ""; //empty string that will be given the name of a drink from the array
-        if (currentTemp > 85) {
-            //populate the array
-            drinksArray = [
-              "Margarita",
-              "Mojito",
-              "Aperol-Spritz",
-              "Pina-Colada",
-              "Daiquiri",
-              "Paloma",
-              "White-Wine-Sangria",
-              "Mint-Julep",
-            ];
-            //randomly generate the index then select the drink
-            drinkIndex = Math.floor(Math.random() * drinksArray.length);
-            drink = drinksArray[drinkIndex];
-            while (drink == currentDrink) {
-              drinkIndex = Math.floor(Math.random() * drinksArray.length);
-              drink = drinksArray[drinkIndex];
-            }
-            //append the selected drink name to the url and call the tempSearch function which contains the Fetch code
-            currentDrink = drink;
-            setDrinkName(drink);
-            console.log("searchValue: ",drink)
-            console.log("It's a scorcher today! Try a refreshing " + drink);
-          } else if (currentTemp > 60 && currentTemp <= 85) {
-            drinksArray = [
-              "Moscow-Mule",
-              "Tom-Collins",
-              "Rum-Punch",
-              "Sazerac",
-              "Dry-Martini",
-              "Whiskey Sour",
-              "Sidecar",
-            ];
-            drinkIndex = Math.floor(Math.random() * drinksArray.length);
-            drink = drinksArray[drinkIndex];
-            while (drink == currentDrink) {
-              drinkIndex = Math.floor(Math.random() * drinksArray.length);
-              drink = drinksArray[drinkIndex];
-            }
-            currentDrink = drink;
-            setDrinkName(drink);
-            console.log("searchValue: ",drink)
-            console.log("Nice Day! Relax with an easy-sipping " + drink);
-          } else if (currentTemp > 40 && currentTemp <= 60) {
-            drinksArray = [
-              "Old-Fashioned",
-              "Martinez",
-              "Negroni",
-              "Boulevardier",
-              "Sidecar",
-            ];
-            drinkIndex = Math.floor(Math.random() * drinksArray.length);
-            drink = drinksArray[drinkIndex];
-            while (drink == currentDrink) {
-              drinkIndex = Math.floor(Math.random() * drinksArray.length);
-              drink = drinksArray[drinkIndex];
-            }
-            currentDrink = drink;
-            setDrinkName(drink);
-            console.log("searchValue: ",drink)
-            console.log(data)
-            console.log(
-              "It's a bit chilly! You need a little liquid warmth from a stiff " + drink
-            );
-          } else {
-            drinksArray = [
-              "Irish-Coffee",
-              "Hot-Toddy",
-              "Mulled-Wine",
-              "Eggnog",
-              "Mudslide",
-            ];
-            drinkIndex = Math.floor(Math.random() * drinksArray.length);
-            drink = drinksArray[drinkIndex];
-            while (drink == currentDrink) {
-              drinkIndex = Math.floor(Math.random() * drinksArray.length);
-              drink = drinksArray[drinkIndex];
-            }
-            currentDrink = drink;
-            setDrinkName(drink);
-            console.log("searchValue: ",drink)
-            console.log("Brr. Warm up with a " + drink);
-          }
-          return currentDrink;
-        }
-
-
-      function getCurrentWeather(city) {
-        var apiKey = "6015d4614214e35f89f83b4825650637";
-
-        fetch(
-          "https://api.openweathermap.org/data/2.5/weather?q=" +
-            city +
-            "&appid=" +
-            apiKey +
-            "&units=imperial"
-        )
-          .then(function (response) {
-            return response.json();
-          })
-      
-          .then(function (response) {
-            var currentTemp = response.main.temp;
-            console.log(currentTemp);
-            drinkRec(currentTemp);
-
-            // currentTempEl.textContent =
-            //   "Temp: " + Math.round(currentTemp) + " \u00B0F";
-          });
+  const NAME_QUERY = gql`
+    query Cocktails($name: String!) {
+      cocktail(name: $name) {
+        name
+        ingredients
+        instructions
+        avgRating
+        views
+        image
       }
+    }
+  `;
+  const [search, { loading, data, error }] = useLazyQuery(NAME_QUERY, {
+    variables: { name: drinkName },
+  });
 
-      React.useEffect(() => {
-        console.log(searchValue);
-        getCurrentWeather(searchValue);
-      }, [searchValue])
+  var currentDrink = "";
 
-      React.useEffect(() => {
-        console.log(drinkName);
-        search();
-      }, [searchValue])
+  function drinkRec(currentTemp) {
+    var drinksArray = []; //empty array that will be filled with curated drink suggestions
+    var drinkIndex; //index variable that will be randomly assigned to select a drink from the array
+    var drink = ""; //empty string that will be given the name of a drink from the array
+    if (currentTemp > 85) {
+      //populate the array
+      drinksArray = [
+        "Margarita",
+        "Mojito",
+        "Aperol-Spritz",
+        "Pina-Colada",
+        "Daiquiri",
+        "Paloma",
+        "White-Wine-Sangria",
+        "Mint-Julep",
+      ];
+      //randomly generate the index then select the drink
+      drinkIndex = Math.floor(Math.random() * drinksArray.length);
+      drink = drinksArray[drinkIndex];
+      while (drink == currentDrink) {
+        drinkIndex = Math.floor(Math.random() * drinksArray.length);
+        drink = drinksArray[drinkIndex];
+      }
+      //append the selected drink name to the url and call the tempSearch function which contains the Fetch code
+      currentDrink = drink;
+      setDrinkName(drink);
+      console.log("searchValue: ", drink);
+      console.log("It's a scorcher today! Try a refreshing " + drink);
+    } else if (currentTemp > 60 && currentTemp <= 85) {
+      drinksArray = [
+        "Moscow-Mule",
+        "Tom-Collins",
+        "Rum-Punch",
+        "Sazerac",
+        "Dry-Martini",
+        "Whiskey Sour",
+        "Sidecar",
+      ];
+      drinkIndex = Math.floor(Math.random() * drinksArray.length);
+      drink = drinksArray[drinkIndex];
+      while (drink == currentDrink) {
+        drinkIndex = Math.floor(Math.random() * drinksArray.length);
+        drink = drinksArray[drinkIndex];
+      }
+      currentDrink = drink;
+      setDrinkName(drink);
+      console.log("searchValue: ", drink);
+      console.log("Nice Day! Relax with an easy-sipping " + drink);
+    } else if (currentTemp > 40 && currentTemp <= 60) {
+      drinksArray = [
+        "Old-Fashioned",
+        "Martinez",
+        "Negroni",
+        "Boulevardier",
+        "Sidecar",
+      ];
+      drinkIndex = Math.floor(Math.random() * drinksArray.length);
+      drink = drinksArray[drinkIndex];
+      while (drink == currentDrink) {
+        drinkIndex = Math.floor(Math.random() * drinksArray.length);
+        drink = drinksArray[drinkIndex];
+      }
+      currentDrink = drink;
+      setDrinkName(drink);
+      console.log("searchValue: ", drink);
+      console.log(data);
+      console.log(
+        "It's a bit chilly! You need a little liquid warmth from a stiff " +
+          drink
+      );
+    } else {
+      drinksArray = [
+        "Irish-Coffee",
+        "Hot-Toddy",
+        "Mulled-Wine",
+        "Eggnog",
+        "Mudslide",
+      ];
+      drinkIndex = Math.floor(Math.random() * drinksArray.length);
+      drink = drinksArray[drinkIndex];
+      while (drink == currentDrink) {
+        drinkIndex = Math.floor(Math.random() * drinksArray.length);
+        drink = drinksArray[drinkIndex];
+      }
+      currentDrink = drink;
+      setDrinkName(drink);
+      console.log("searchValue: ", drink);
+      console.log("Brr. Warm up with a " + drink);
+    }
+    return currentDrink;
+  }
 
+  function getCurrentWeather(city) {
+    var apiKey = "6015d4614214e35f89f83b4825650637";
+
+    fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+        city +
+        "&appid=" +
+        apiKey +
+        "&units=imperial"
+    )
+      .then(function (response) {
+        return response.json();
+      })
+
+      .then(function (response) {
+        var currentTemp = response.main.temp;
+        console.log(currentTemp);
+        drinkRec(currentTemp);
+
+        // currentTempEl.textContent =
+        //   "Temp: " + Math.round(currentTemp) + " \u00B0F";
+      });
+  }
+
+  React.useEffect(() => {
+    console.log(searchValue);
+    getCurrentWeather(searchValue);
+  }, [searchValue]);
+
+  React.useEffect(() => {
+    console.log(drinkName);
+    search();
+  }, [searchValue]);
 
   const handleSearch = (e) => {
     e.preventDefault();
 
-    async function awaitUpdate () {
-        await setSearchValue(formData, console.log("Search value should be updated", searchValue));
-        console.log("Search value Definitely should be updated now: ",searchValue)
+    async function awaitUpdate() {
+      await setSearchValue(
+        formData,
+        console.log("Search value should be updated", searchValue)
+      );
+      console.log(
+        "Search value Definitely should be updated now: ",
+        searchValue
+      );
     }
     awaitUpdate();
-
-
   };
 
   return (
@@ -181,14 +182,20 @@ query Cocktails($name: String!) {
           id="search-city-input"
           className="form-input"
           placeholder="e.g. New York"
-          type = "text"
-          onChange = {handleChange}
-        //   value = {formData.city}
+          type="text"
+          onChange={handleChange}
+          //   value = {formData.city}
         />
-        <button onClick={handleSearch} className="button">Search</button>
-        {data ? <p>{`${data.cocktail.name}
+        <button onClick={handleSearch} className="button">
+          Search
+        </button>
+        {data ? (
+          <p>{`${data.cocktail.name}
         ${data.cocktail.ingredients}
-        ${data.cocktail.instructions}`}</p> : <p></p> }
+        ${data.cocktail.instructions}`}</p>
+        ) : (
+          <p></p>
+        )}
       </form>
     </div>
   );
