@@ -11,40 +11,41 @@ export default function NameForm() {
   function handleChange(event) {
     setFormData(event.target.value);
   }
-const NAME_QUERY = gql`
-query Cocktails($name: String!) {
-  cocktail(name: $name) {
-    name
-    ingredients
-    instructions
-    avgRating
-    views
-    image
+  
+const INGREDIENT_QUERY = gql`
+query CocktailByIng($string: String!) {
+    cocktailByIng(string: $string) {
+      name
+      ingredients
+      instructions
+      image
+    }
   }
-}
 `;
-    const [search, {loading, data, error}] = useLazyQuery(NAME_QUERY, {
-        variables : {name: searchValue}
+    const [search, {loading, data, error}] = useLazyQuery(INGREDIENT_QUERY, {
+        variables : {string: searchValue}
       });
 
 
   const handleSearch = (e) => {
     e.preventDefault();
     setSearchValue(formData);
+    console.log(searchValue, formData)
     search()
     if (loading) return 'loading...';
     if (error) return <pre>{error.message}</pre>
+    console.log(data);
 
   };
 
   return (
     <div>
-      <form id="search-name-form">
-        <label id="search-name-label" htmlFor="search-input">
-          Search by name:
+      <form id="search-ingredient-form">
+        <label id="search-ingredient-label" htmlFor="search-input">
+          Search by ingredient:
         </label>
         <input
-          id="search-name-input"
+          id="search-ingredient-input"
           className="form-input"
           placeholder="e.g. Margarita"
           type = "text"
@@ -52,9 +53,15 @@ query Cocktails($name: String!) {
         //   value = {formData.city}
         />
         <button onClick={handleSearch} className="button">Search</button>
-        {data ? <p>{`${data.cocktail.name}
-        ${data.cocktail.ingredients}
-        ${data.cocktail.instructions}`}</p> : <p></p> }
+        {data ?
+        
+        data.cocktailByIng.map((cocktail) => {
+            console.log(cocktail)
+            return <p>{cocktail.name}</p>
+        })
+        
+        : <p></p>
+         }
       </form>
     </div>
   );
