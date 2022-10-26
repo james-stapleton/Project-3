@@ -57,7 +57,7 @@ query Cocktails($name: String!) {
             }
             //append the selected drink name to the url and call the tempSearch function which contains the Fetch code
             currentDrink = drink;
-            setDrinkName(drink, search());
+            setDrinkName(drink);
             console.log("searchValue: ",drink)
             console.log("It's a scorcher today! Try a refreshing " + drink);
           } else if (currentTemp > 60 && currentTemp <= 85) {
@@ -77,7 +77,7 @@ query Cocktails($name: String!) {
               drink = drinksArray[drinkIndex];
             }
             currentDrink = drink;
-            setDrinkName(drink, search());
+            setDrinkName(drink);
             console.log("searchValue: ",drink)
             console.log("Nice Day! Relax with an easy-sipping " + drink);
           } else if (currentTemp > 40 && currentTemp <= 60) {
@@ -95,7 +95,7 @@ query Cocktails($name: String!) {
               drink = drinksArray[drinkIndex];
             }
             currentDrink = drink;
-            setDrinkName(drink, search());
+            setDrinkName(drink);
             console.log("searchValue: ",drink)
             console.log(data)
             console.log(
@@ -116,7 +116,7 @@ query Cocktails($name: String!) {
               drink = drinksArray[drinkIndex];
             }
             currentDrink = drink;
-            setDrinkName(drink, search());
+            setDrinkName(drink);
             console.log("searchValue: ",drink)
             console.log("Brr. Warm up with a " + drink);
           }
@@ -148,7 +148,15 @@ query Cocktails($name: String!) {
           });
       }
 
-     
+      React.useEffect(() => {
+        console.log(searchValue);
+        getCurrentWeather(searchValue);
+      }, [searchValue])
+
+      React.useEffect(() => {
+        console.log(drinkName);
+        search();
+      }, [searchValue])
 
 
   const handleSearch = (e) => {
@@ -160,7 +168,6 @@ query Cocktails($name: String!) {
     }
     awaitUpdate();
 
-    setSearchValue(formData, getCurrentWeather(searchValue));
 
   };
 
