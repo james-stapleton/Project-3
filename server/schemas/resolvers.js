@@ -145,7 +145,7 @@ const resolvers = {
       if (ratingArray.length > 0) {
 
       for (let i = 0; i < ratingArray.length; i++) {
-        if (ratingArray[i].email === rating.email) {
+        if (ratingArray[i].userEmail === rating.userEmail) {
           currentRatings.rating[i] = rating;
           push = false;
           break; 
@@ -154,7 +154,7 @@ const resolvers = {
     }
       push ? currentRatings.rating.push(rating) : console.log("no push");
       const newRatings = await currentRatings.save();
-      console.log(newRatings.rating);
+      console.log("NewRatings:",newRatings.rating);
     },
     incrementViews: async(parent, {name}) => {
       const incrementCocktail = await Cocktails.findOneAndUpdate({name}, {$inc: {views: 1}}, {new: false})

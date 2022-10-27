@@ -2,6 +2,7 @@ import React from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import DrinkCard from '../components/DrinkCard';
+import UnsaveButton from '../components/UnsaveButton'
 
 const SavedDrinks = () => {
 
@@ -29,9 +30,12 @@ const SavedDrinks = () => {
         <h1>Saved Drinks</h1>
         <ul>
             {cocktailArray.map((cocktail) =>
+            <pre>
             <Link to = {`/Recipe/${cocktail.name}`}>
               <DrinkCard cocktail={cocktail}/>
             </Link>
+            <UnsaveButton name = {cocktail.name}/>
+            </pre>
             )}
         </ul>
         </pre>

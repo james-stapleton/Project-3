@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DrinkCard({cocktail}) {
+export default function DrinkCard({cocktail, rating}) {
 
     const {name, ingredients, instructions, views, avgRating, image} = cocktail;
     const style = {
@@ -17,6 +17,7 @@ export default function DrinkCard({cocktail}) {
             {instructions && <p>{instructions}</p>}
             {views && <p>Views: {views}</p>}
             {avgRating && <p>Rating: {avgRating}</p>}
+            {rating && <p>You rated this drink {rating}</p>}
             <p>{image}</p>
         </div>
     )

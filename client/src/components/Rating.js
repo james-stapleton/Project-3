@@ -18,19 +18,23 @@ export default function Rating(props) {
     console.log(data);
     
     async function handleClick(event) {
+        console.log("props:",props)
 
         let cocktailName =props.name;
         console.log ("Cocktail name: ", cocktailName);
         event.preventDefault();
         var newRating = event.target.id;
+        var ratingEmail = localStorage.getItem("email");
+        console.log("email: ", ratingEmail);
         const ratingNum = parseInt(newRating);
         console.log(newRating);
         console.log("name",props.name)
         sendRating({variables: {name: `${cocktailName}`, rating: {
-            "userEmail": "c@test.com",
+            "userEmail": ratingEmail,
             "value": ratingNum
         }}})
-
+        props.onClick();
+        console.log("rated: ", props.rated);
         }
 
     return(
