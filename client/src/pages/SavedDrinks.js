@@ -14,7 +14,8 @@ const SavedDrinks = () => {
         }
       }`
 
-      const {loading, data, error } = useQuery(SAVED_QUERY, {variables: {email: "j@test.com"}})
+      let userEmail = localStorage.getItem("email");
+      const {loading, data, error } = useQuery(SAVED_QUERY, {variables: {email: userEmail}})
 
       if (loading) return "Loading...";
       if (error) return `{error.message}`;

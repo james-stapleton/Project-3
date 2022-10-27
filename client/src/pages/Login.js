@@ -22,12 +22,13 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    let userEmail = formState.email;
+    localStorage.setItem("email", userEmail);
     console.log(formState);
     try {
       const { data } = await login({
         variables: { ...formState },
       });
-
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
