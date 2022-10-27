@@ -1,6 +1,7 @@
 import React from 'react';
 import {useQuery, gql} from '@apollo/client';
 import {useParams} from 'react-router-dom';
+import Rating from '../components/Rating'
 
 
 export default function Recipe (props) {
@@ -36,6 +37,7 @@ export default function Recipe (props) {
             <li>{data.cocktail.views}</li>
             <li>{data.cocktail.image}</li>
         </ul>
+        <Rating name = {name}/>
         </div> 
     )
 }
