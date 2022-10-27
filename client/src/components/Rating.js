@@ -14,13 +14,16 @@ export default function Rating(props) {
     const [sendRating, {loading, data, error}] = useMutation(RATING_MUTATION);
     
     async function handleClick(event) {
+
+        let cocktailName =props.name;
+        console.log ("Cocktail name: ", cocktailName);
         event.preventDefault();
         var newRating = event.target.id;
         const ratingNum = parseInt(newRating);
         console.log(newRating);
         console.log("name",props.name)
-        sendRating({variables: {name: "Moscow-Mule", rating: {
-            "email": "c@test.com",
+        sendRating({variables: {name: `${cocktailName}`, rating: {
+            "userEmail": "c@test.com",
             "value": ratingNum
         }}})
 
