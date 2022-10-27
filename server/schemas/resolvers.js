@@ -157,7 +157,7 @@ const resolvers = {
       console.log(newRatings.rating);
     },
     incrementViews: async(parent, {name}) => {
-      const incrementCocktail = await Cocktails.findOneAndUpdate({name}, {$inc: {views: 1}}, {new: true})
+      const incrementCocktail = await Cocktails.findOneAndUpdate({name}, {$inc: {views: 1}}, {new: false})
     }
   },
 };
