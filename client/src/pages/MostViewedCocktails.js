@@ -18,7 +18,6 @@ const MostViewedCocktails = (props) => {
     const {data, loading, error} = useQuery(VIEW_QUERY);
 
 
-
     if (loading) return 'Loading...';
     if (error) return <pre>{error.message}</pre>
 

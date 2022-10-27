@@ -21,7 +21,7 @@ const cocktailSchema = new Schema(
     },
     rating: [
       {
-        email: { type: String},
+        userEmail: String,
         value: Number,
       },
     ],

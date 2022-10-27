@@ -127,30 +127,28 @@ const resolvers = {
       const saveUser = await user.save();
       return saveUser;
     },
-    // Given the name of a cocktail and a rating object: {email, value}
-    // Upsert the rating field (array of objects)
+  
     upsertCocktailRating: async (parent, { name, rating }) => {
-      // first find the cocktail
       const currentRatings = await Cocktails.findOne({ name: name });
-      // save the array as a variable for easier code to read
       const ratingArray = currentRatings.rating;
-      // declare a boolean 'push' variable to track whether this is an update or insert
+
+      console.log("Current ratings: ", ratingArray)
+
       let push = true;
+
+      if (ratingArray.length > 0) {
+
       for (let i = 0; i < ratingArray.length; i++) {
-        // check each element in the ratingArray to see if the email provided matches an existing ratingArray object's email field
         if (ratingArray[i].email === rating.email) {
-          // inside the loop, if we find a match, update the rating.
           currentRatings.rating[i] = rating;
-          //Set push flag to false so we know not to add a new rating for the same user
           push = false;
-          break; // exit the loop
+          break; 
         }
       }
-      // If push is still true, we didn't find any ratings from this user for this drink
-      // In that case we will push a new rating to the array
-      // We have now either updated or inserted our new rating, so save the cocktail to the database
+    }
       push ? currentRatings.rating.push(rating) : console.log("no push");
       const newRatings = await currentRatings.save();
+      console.log(newRatings.rating);
     },
   },
 };

@@ -16,7 +16,7 @@ const typeDefs = gql`
   }
 
   type Ratings {
-    email: String!
+    userEmail: String
     value: Int
   }
 
@@ -48,7 +48,7 @@ const typeDefs = gql`
   }
 
   input RatingInput {
-    email: String
+    userEmail: String
     value: Int
   }
 
@@ -76,8 +76,8 @@ const typeDefs = gql`
     createCocktail(name: String!, ingredients: String!, instructions: String!, image: String): Cocktails
     updateCocktail(_id: ID!, args: CocktailUpdate): Cocktails
     deleteCocktail(_id: ID!): Cocktails
-    saveCocktail(email: String!, cocktails: CocktailInput): Users
-    saveCocktailID(email: String!, cocktails: CocktailInputID): Users
+    saveCocktail(email: String, cocktails: CocktailInput): Users
+    saveCocktailID(email: String, cocktails: CocktailInputID): Users
     unSaveCocktail(email: String!, _id: ID!): Users
     unSaveCocktailName(email: String!, name: String!): Users
     upsertCocktailRating(name: String!, rating: RatingInput): Cocktails
