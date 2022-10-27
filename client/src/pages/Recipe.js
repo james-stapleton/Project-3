@@ -1,8 +1,8 @@
 import React from 'react';
-import {useQuery, gql} from '@apollo/client';
+import {useMutation, useQuery, gql} from '@apollo/client';
 import {useParams} from 'react-router-dom';
 import Rating from '../components/Rating'
-
+import DrinkCard from '../components/DrinkCard';
 
 export default function Recipe (props) {
 
@@ -21,22 +21,33 @@ export default function Recipe (props) {
     }
   `;
 
+  const INCREMENT_VIEWS = gql`
+  mutation IncrementViews($name: String!) {
+    incrementViews(name: $name) {
+      name
+      views
+    }
+  }`
+
+  const [increment] = useMutation(INCREMENT_VIEWS);
+
+  React.useEffect(() => {
+    increment({variables: {name: name}});
+  },[])
+
     const {data, loading, error } = useQuery(GET_COCKTAIL, {variables: {name}});
+
 
     if (loading) return 'loading...';
     if (error) return <pre>{error.message}</pre>
 
+    if (data) {
+
+    }
 
     return (
         <div>
-        <h1>{name}</h1>
-        <ul>
-            <li>{data.cocktail.ingredients}</li>
-            <li>{data.cocktail.instructions}</li>
-            <li>{data.cocktail.avgRating}</li>
-            <li>{data.cocktail.views}</li>
-            <li>{data.cocktail.image}</li>
-        </ul>
+        <DrinkCard cocktail={data.cocktail} />
         <Rating name = {name}/>
         </div> 
     )
