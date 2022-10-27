@@ -1,6 +1,6 @@
 [
     {
-        "name": "Vodka-Slime ",
+        "name": "Vodka-Slime",
         "ingredients": "1oz Vodka, 1oz Lime Juice, Sprite",
         "instructions": "Add vodka, lime juice and sprite to the top in a highball glass with crushed ice. Stir and serve.",
         "image": "VodkaSlime.webp"
@@ -61,43 +61,43 @@
         "image": "VodkaGimlet.webp"
     },
     {
-        "name": "Dry-Martini ",
+        "name": "Dry-Martini",
         "ingredients": "2oz Vodka, 0.5oz Dry Vermouth",
         "instructions": "Add the ingredients into a mixing glass with ice cubes. Stir well then strain into a chilled cocktail glass. Garnish with an olive and a squeeze of lemon peel oil and serve.",
         "image": "DirtyMartini.webp" 
     },
     {
-        "name": "Aperol-Spritz ",
+        "name": "Aperol-Spritz",
         "ingredients": "1.5oz Aperol, 2oz Prosecco, 0.5oz Simple Syrup",
         "instructions": "Add vodka, lime juice and prosecco to the top in a highball glass with crushed ice. Stir and serve.",
         "image": "AperolSpritz.webp" 
     },
     {
-        "name": "Aperol-Sour ",
+        "name": "Aperol-Sour",
         "ingredients": "2oz Aperol, 1oz Lemon Juice, 0.5oz Simple Syrup",
         "instructions": "Add all ingredients to a cocktail shaker with ice. Shake well for 10-15 seconds or until the outside of the shaker becomes frosted. Strain into highball glass over ice and serve.",
         "image": "AperolSour.jpg" 
     },
     {
-        "name": "Espresso-Martini ",
+        "name": "Espresso-Martini",
         "ingredients": "1oz Vodka, 1oz Kahlua, 0.5oz Simple Syrup, 1 Espresso Shot",
         "instructions": "Pour all ingredients into a cocktail shaker filled with ice. Shake vigorously; it should be somewhat frothy. Strain into a chilled cocktail glass and serve.",
         "image": "EspressoMartini.jpg" 
     },
     {
-        "name": "Manhattan-Sweet ",
+        "name": "Manhattan-Sweet",
         "ingredients": "2oz Bourbon, 1oz Martini Rosso, Dash of Angostura Bitters",
         "instructions": "Add all ingredients together with ice to a cocktail shaker then strain into a short stemmed glass. Garnish by expressing the oils from an orange peel and a cocktail cherry, and serve.",
         "image": "ManhattanSweet.jpg" 
     },
     {
-        "name": "Manhattan-Dry ",
+        "name": "Manhattan-Dry",
         "ingredients": "2oz Bourbon, 1oz Dry Vermouth, Dash of Angostura Bitters",
         "instructions": "Add all ingredients together with ice to a cocktail shaker then strain into a short stemmed glass. Garnish by expressing the oils from an lemon peel twist and serve.",
         "image": "ManhattanDry.jpg" 
     },
     {
-        "name": "Dirty-Old-Manhattan ",
+        "name": "Dirty-Old-Manhattan",
         "ingredients": "1.5oz Rye Whiskey, 1oz Sweet Vermouth, 0.25oz Orange Juice, Dash of Orange Bitters, Teaspoon of Cherry Juice",
         "instructions": "Pour the rye whiskey into a cocktail shaker. Combine with the fresh orange juice, sweet vermouth, cherry juice, and bitters. Fill with ice and shake vigorously for about six seconds. Strain into a chilled cocktail glass. Take an orange rind and spritz a good amount of orange perfume around the rim of the glass. Garnish with the orange rind and a cherry, and serve.",
         "image": "DirtyOldManhattan.jpg" 
@@ -109,13 +109,13 @@
         "image": "Daiquiri.webp"
     },
     {
-        "name": "Cosmopolitan ",
+        "name": "Cosmopolitan",
         "ingredients": "1.5oz Lemon Vodka, 0.5oz Triple Sec, 0.5oz Lime Juice, 1oz Cranberry Juice",
         "instructions": "Add all the ingredients to a cocktail shaker with plenty of ice, and shake until the outside of the shaker becomes frosted. Strain into a cocktail glass and garnish with a twist of lemon peel before serving.",
         "image": "Cosmopolitan.webp" 
     },
     {
-        "name": "Bellini ",
+        "name": "Bellini",
         "ingredients": "3.5oz Prosecco, 3.5oz Peach Juice",
         "instructions": "Add the peach juice into a mixing glass and add the Prosecco. Stir gently. Pour into a champagne flute and serve.",
         "image": "Bellini.webp" 
@@ -139,7 +139,7 @@
         "image": "AmarettoSor.webp"
     },
     {
-        "name": "Pina-Colada ",
+        "name": "Pina-Colada",
         "ingredients": "3oz White Rum, 1oz Coconut Cream, 0.75oz Pineapple Juice ",
         "instructions": "Add all ingredients to a blender with ice and blend until smooth. Pour into a hurricane glass. Garnish with a slice of pineapple and a cocktail cherry before serving.",
         "image": "PinaColada.webp"
