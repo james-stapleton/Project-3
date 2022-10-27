@@ -77,6 +77,9 @@ const Login = (props) => {
                 >
                   Submit
                 </button>
+                <p>
+                  Don't have an account? <Link to = "/Register"><button className="btn btn-outline-success" type="button">Sign up!</button></Link>
+                </p>
               </form>
             )}
 
