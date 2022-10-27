@@ -66,6 +66,8 @@ const typeDefs = gql`
     userEmail(email: String!): Users
     cocktailByIng(string: String!): [Cocktails]
     cocktailRating(name: String!): Cocktails 
+    rankedCocktails: [Cocktails]
+    viewedCocktails: [Cocktails]
   }
 
   type Mutation {
@@ -81,6 +83,7 @@ const typeDefs = gql`
     unSaveCocktail(email: String!, _id: ID!): Users
     unSaveCocktailName(email: String!, name: String!): Users
     upsertCocktailRating(name: String!, rating: RatingInput): Cocktails
+    incrementViews(name: String!): Cocktails
   }
 `;
 

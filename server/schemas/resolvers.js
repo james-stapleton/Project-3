@@ -19,7 +19,7 @@ const resolvers = {
     },
     // get all cocktails, cocktails by name, or by ingredient
     cocktails: async () => {
-      return Cocktails.find({});
+      return Cocktails.find({}).sort({views: -1});
     },
     cocktail: async (parent, { name }) => {
       return Cocktails.findOne({ name: name });
@@ -30,6 +30,12 @@ const resolvers = {
     // get the aray of ratings for a cocktail
     cocktailRating: async (parent, { name }) => {
       return Cocktails.findOne({ name: name }).select("name rating");
+    },
+    rankedCocktails: async () => {
+      return Cocktails.find({}).sort({avgRating: -1});
+    },
+    viewedCocktails: async() => {
+      return Cocktails.find({}).sort({views: -1});
     }
   },
   Mutation: {
@@ -150,6 +156,9 @@ const resolvers = {
       const newRatings = await currentRatings.save();
       console.log(newRatings.rating);
     },
+    incrementViews: async(parent, {name}) => {
+      const incrementCocktail = await Cocktails.findOneAndUpdate({name}, {$inc: {views: 1}}, {new: true})
+    }
   },
 };
 

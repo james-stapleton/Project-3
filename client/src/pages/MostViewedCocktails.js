@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import {Link} from 'react-router-dom'
+import DrinkCard from "../components/DrinkCard";
 
 const VIEW_QUERY = gql`
   {
@@ -27,7 +28,7 @@ const MostViewedCocktails = (props) => {
         <ul>
             {data.cocktails.map((cocktail) =>
             <Link to = {`/Recipe/${cocktail.name}`}>
-            <li  id={cocktail.name} key = {cocktail._id}>{cocktail.name} {cocktail.views}</li>
+              <DrinkCard cocktail={cocktail}/>
             </Link>
             )}
         </ul>
