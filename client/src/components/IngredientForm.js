@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
 import { useParams, Link } from "react-router-dom";
+import DrinkCard from "./DrinkCard";
 
 
 export default function NameForm() {
@@ -25,6 +26,10 @@ query CocktailByIng($string: String!) {
     const [search, {loading, data, error}] = useLazyQuery(INGREDIENT_QUERY, {
         variables : {string: searchValue}
       });
+
+      if (loading) return 'Loading...';
+    if (error) return <pre>{error.message}</pre>
+    console.log(data);
 
 
   const handleSearch = (e) => {
@@ -59,9 +64,7 @@ query CocktailByIng($string: String!) {
             console.log(cocktail)
             return (
             <Link to = {`/Recipe/${cocktail.name}`}>
-             <p>{cocktail.name}
-            {cocktail.ingredients}
-            {cocktail.image}</p>
+             <DrinkCard cocktail = {cocktail} />
             </Link>)
         })
         

@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import {Link} from 'react-router-dom'
+import DrinkCard from "../components/DrinkCard";
 
 const RATING_QUERY = gql`
   {
@@ -12,10 +13,13 @@ const RATING_QUERY = gql`
 `;
 
 const CocktailRankings = (props) => {
+
     const {data, loading, error} = useQuery(RATING_QUERY);
 
     if (loading) return 'Loading...';
     if (error) return <pre>{error.message}</pre>
+
+    console.log(data);
 
     return (
         <pre>
@@ -23,7 +27,7 @@ const CocktailRankings = (props) => {
         <ul>
             {data.cocktails.map((cocktail) =>
             <Link to = {`/Recipe/${cocktail.name}`}>
-            <li  id={cocktail.name} key = {cocktail._id}>{cocktail.name} {cocktail.avgRating}</li>
+            <DrinkCard cocktail={cocktail} />
             </Link>
             )}
         </ul>

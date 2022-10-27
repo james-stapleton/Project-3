@@ -12,6 +12,10 @@ export default function Rating(props) {
       }`
 
     const [sendRating, {loading, data, error}] = useMutation(RATING_MUTATION);
+
+    if (loading) return 'Loading...';
+    if (error) return <pre>{error.message}</pre>
+    console.log(data);
     
     async function handleClick(event) {
 
