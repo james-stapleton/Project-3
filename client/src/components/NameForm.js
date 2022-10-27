@@ -31,7 +31,19 @@ query Cocktails($name: String!) {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    setSearchValue(formData);
+    console.log(searchValue);
+    setSearchValue(formData)
+
+
+    setTimeout(function() {
+      
+    console.log(searchValue);
+
+    }, 10000)
+    console.log(searchValue);
+
+
+
     search()
     if (loading) return 'loading...';
     if (error) return <pre>{error.message}</pre>

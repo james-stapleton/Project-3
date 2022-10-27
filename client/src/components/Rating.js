@@ -19,8 +19,8 @@ export default function Rating(props) {
         const ratingNum = parseInt(newRating);
         console.log(newRating);
         console.log("name",props.name)
-        sendRating({variables: {name: 'Margarita', rating: {
-            "email": "j@test.com",
+        sendRating({variables: {name: "Moscow-Mule", rating: {
+            "email": "c@test.com",
             "value": ratingNum
         }}})
 

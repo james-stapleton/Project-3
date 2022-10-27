@@ -48,7 +48,7 @@ const typeDefs = gql`
   }
 
   input RatingInput {
-    email: String!
+    email: String
     value: Int
   }
 
