@@ -23,6 +23,7 @@ const Login = (props) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     let userEmail = formState.email;
+    let username = formState.name;
     localStorage.setItem("email", userEmail);
     console.log(formState);
     try {

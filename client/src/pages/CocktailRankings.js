@@ -14,7 +14,7 @@ const RATING_QUERY = gql`
 
 const CocktailRankings = (props) => {
 
-    const {data, loading, error} = useQuery(RATING_QUERY);
+    const {data, loading, error} = useQuery(RATING_QUERY, {fetchPolicy: "network-only"});
 
     if (loading) return 'Loading...';
     if (error) return <pre>{error.message}</pre>
