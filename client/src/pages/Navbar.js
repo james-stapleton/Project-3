@@ -13,7 +13,7 @@ const Navbar = () => {
       <form className="container-fluid justify-content-md-center form-inline">
         <div class="row bg-banner">
           <div class="col image-container">
-            <a href="/"><img src="../images/Logo_Finished.png" width="398" alt="Logo" class="logo" /></a>
+            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" class="logo" /></a>
           </div>
           <div class="col page-buttons">
             <Link reloadDocument to="/MostViewedDrinks" ><button class="button" type="button">Most Viewed Cocktails</button></Link>

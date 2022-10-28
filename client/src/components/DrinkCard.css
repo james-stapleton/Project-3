@@ -1,4 +1,11 @@
 #recipe-card-data {
     background-color: #D7B877;
     color: #876827;
+    border: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #332F2E;
 }
