@@ -58,7 +58,7 @@ export default function Recipe (props) {
         <SaveButton name = {data.cocktail.name} />
         <UnsaveButton name = {data.cocktail.name} />
         {/* {dropdown } */}
-        <Video />
+        <Video name = {name}/>
         </div> 
     )
 }
