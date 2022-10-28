@@ -1,25 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { gql, useQuery } from '@apollo/client';
 
-
-const QUERY_NAME = gql`
-query UserEmail($email: String!) {
-  userEmail(email: $email) {
-    name  
-  }
-}
-`
 
 const Navbar = () => {
 
     const refreshPage = () => window.location.reload(); 
-    const { loading, data } = useQuery(QUERY_NAME);
-    const name = data?.name || [];
-
-    
+    const localName = localStorage.getItem("name")
+  
 
     return (
+      
     <nav className="navbar">
     <form className="form-inline">
       <Link to = "/MostViewedDrinks" ><button className="btn btn-outline-success" type="button">Most Viewed Cocktails</button></Link>
@@ -31,7 +21,9 @@ const Navbar = () => {
       <Link to="Login"><button className="btn btn-outline-success" type="button">Logout</button></Link>
       <Link to ="/Register"><button>Register</button></Link>
     </form>
-    <p>Welcome {name}</p>
+
+    <h1>signed in as {localName}</h1>
+
   </nav> 
   )
 }
