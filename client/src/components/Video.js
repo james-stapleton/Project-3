@@ -2,14 +2,11 @@ import React from 'react';
 
 export default function Video() {
 
-    fetch(`https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?
-    part=snippet
-    &order=viewCount
-    &q=skateboarding+dog
-    &type=video
-    &videoDefinition=high`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDnqR3K3X57AM3byrSumlR1nT2BXYn2FxM&q=old-fashioned&type=video&part=snippet`)
     .then((response) => response.json())
     .then((data) => console.log(data))
+
+    
 
     return (
         <pre>
