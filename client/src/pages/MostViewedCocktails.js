@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import DrinkCard from "../components/DrinkCard";
 
 const VIEW_QUERY = gql`
@@ -12,13 +12,14 @@ const VIEW_QUERY = gql`
   }
 `;
 
+
+
 const MostViewedCocktails = (props) => {
+
 
   console.log("componenet mostviewedCocktails rendered");
 
     const {data, loading, error} = useQuery(VIEW_QUERY);
-
-
     if (loading) return 'Loading...';
     if (error) return <pre>{error.message}</pre>
 
