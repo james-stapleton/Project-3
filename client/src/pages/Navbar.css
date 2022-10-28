@@ -2,7 +2,7 @@
   padding: 0px;
 }
 
-.btn {
+.button {
     height: 30px;
     width: 158px;
     background-color: #62938F;
@@ -15,7 +15,7 @@
     transition-duration: 0.3s;
 }
 
-.btn:hover {
+.button:hover {
     background-color: #446663;
   }
 
@@ -24,6 +24,24 @@
     align-items: right;
   }
 
-  .col {
+  .col-4 {
     padding: 0px;
   }
+
+  .container-fluid {
+    width: 100%;
+    background-image: url('../../public/Images/Banner_Bg_02.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.page-buttons {
+  min-width: 648px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.login-buttons {
+  max-width: 210px;
+  justify-content: right;
+}

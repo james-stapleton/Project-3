@@ -3,16 +3,10 @@ body {
 }
 
 .logo {
-    margin-top: 10px;
+    margin-top: 9px;
     margin-left: 25px;
 }
 
-.image-container {
+/* .image-container {
     height: 250px;
-}
-
-.bg-banner {
-    background-image: url('../images/Banner_Bg_02.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-}
+} */
