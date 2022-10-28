@@ -1,7 +1,3 @@
-* {
-    text
-}
-
 body {
     background-color: #332F2E;
 }
@@ -14,3 +10,7 @@ body {
 /* .image-container {
     height: 250px;
 } */
+
+#root {
+    color: #D7B877;
+} 

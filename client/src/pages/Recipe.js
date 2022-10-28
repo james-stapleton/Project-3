@@ -5,6 +5,7 @@ import Rating from '../components/Rating'
 import DrinkCard from '../components/DrinkCard';
 import SaveButton from '../components/SaveButton';
 import UnsaveButton from '../components/UnsaveButton'
+import "./Recipe.css";
 
 export default function Recipe (props) {
 
@@ -55,7 +56,7 @@ export default function Recipe (props) {
    
 
     return (
-        <div>
+        <div class="recipe-card">
         <DrinkCard rated = {rated} cocktail={data.cocktail} />
         <Rating rated = {rated} onClick = {() =>setRated} name = {name}/>
         <SaveButton name = {data.cocktail.name} />

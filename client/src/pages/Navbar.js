@@ -10,12 +10,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <form className="container-fluid form-inline">
+      <form className="container-fluid justify-content-md-center form-inline">
         <div class="row bg-banner">
-          <div class="col-4 image-container">
+          <div class="col image-container">
             <a href="/"><img src="../images/Logo_Finished.png" width="398" alt="Logo" class="logo" /></a>
           </div>
-          <div class="col-6 page-buttons">
+          <div class="col page-buttons">
             <Link reloadDocument to="/MostViewedDrinks" ><button class="button" type="button">Most Viewed Cocktails</button></Link>
             <Link reloadDocument to="/CocktailRankings"><button className="button" type="button">Cocktail Rankings</button></Link>
             <Link reloadDocument to="/SavedDrinks"><button className="button" type="button">Saved Drinks</button></Link>
