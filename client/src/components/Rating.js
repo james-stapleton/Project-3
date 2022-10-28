@@ -15,10 +15,8 @@ export default function Rating(props) {
 
     if (loading) return 'Loading...';
     if (error) return <pre>{error.message}</pre>
-    console.log(data);
     
     async function handleClick(event) {
-        console.log("props:",props)
 
         let cocktailName =props.name;
         console.log ("Cocktail name: ", cocktailName);
@@ -33,13 +31,12 @@ export default function Rating(props) {
             "userEmail": ratingEmail,
             "value": ratingNum
         }}})
-        props.onClick();
-        console.log("rated: ", props.rated);
+        // props.setRating(newRating);
         }
 
     return(
 
-        <div class="stars" >
+        <div className="stars" >
         <a id='1' onClick={handleClick}>⭐</a>
         <a id='2' onClick={handleClick}>⭐</a>
         <a id='3' onClick={handleClick}>⭐</a>

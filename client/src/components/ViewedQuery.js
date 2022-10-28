@@ -1,41 +1,50 @@
 import React from "react";
-import { useQuery, gql } from "@apollo/client";
-import {Link, useLocation} from 'react-router-dom'
-import DrinkCard from "../components/DrinkCard";
+import {useLazyQuery, gql} from '@apollo/client'
 
-const VIEW_QUERY = gql`
-  {
-    cocktails {
+
+const VIEW_QUERY = gql`query Query($name: String!) {
+    cocktail(name: $name) {
         name
         views
     }
-  }
-`;
+  }`
+
+export default function ViewedQuery({stateVar, cocktail, rating}) {
+
+    const {name} = cocktail;
+    const style = {
+        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+        transition: "0.3s",
+        margins: "10px",
+        border: "solid black"
+    }
+
+    let [search, {loading, data, error}] = useLazyQuery(VIEW_QUERY, {
+        variables : {name: name}, onCompleted: (data) => console.log("query ran, data:", data.cocktail ), 
+        // fetchPolicy: 'network-only'
+      } 
+      
+      );
+      
+      React.useEffect(() => {
+        search()
+      },[stateVar]) 
+
+      if (loading) return 'Loading...';
+      if (error) return "Error";
+
+      if (data) {
+
+          return (
+              <div key = {stateVar} className="card" style={style}>
+                  <h1>{name}</h1>
+                  {data.cocktail.views && <p>Views: {data.cocktail.views} <br></br>
+
+                  State: {stateVar}</p>}
+              </div>
+          )
 
 
+      }
 
-const MostViewedCocktails = (props) => {
-
-
-  console.log("componenet mostviewedCocktails rendered");
-
-    const {data, loading, error} = useQuery(VIEW_QUERY);
-
-    if (loading) return 'Loading...';
-    if (error) return <pre>{error.message}</pre>
-
-    return (
-        <pre>
-        <h1>Most Viewed Drinks</h1>
-        <ul>
-            {data.cocktails.map((cocktail) =>
-            <Link to = {`/Recipe/${cocktail.name}`}>
-              <DrinkCard cocktail={cocktail}/>
-            </Link>
-            )}
-        </ul>
-        </pre>
-    )
 }
-
-export default MostViewedCocktails;
