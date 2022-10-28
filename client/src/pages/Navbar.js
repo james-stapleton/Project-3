@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+const QUERY_NAME = gql`
+query UserEmail($email: String!) {
+  userEmail(email: $email) {
+    name  
+  }
+}
+`
 
 const Navbar = () => {
 
     const refreshPage = () => window.location.reload(); 
+    const { loading, data } = useQuery(QUERY_NAME);
+    const name = data?.name || [];
+
     
 
     return (
