@@ -8,12 +8,31 @@ import WeatherForm from '../components/WeatherForm'
 import {useQuery, gql} from '@apollo/client';
 import {useParams} from 'react-router-dom';
 
+const QUERY_NAME = gql`
+query UserEmail($email: String!) {
+  userEmail(email: $email) {
+    name  
+  }
+}
+`
+
 const Home = () => {
+  let userEmail = localStorage.getItem("email")
+    console.log(userEmail)
+    const {loading, data, error} = useQuery(QUERY_NAME, {
+      variables : {email: userEmail}
+    });
+    if (loading) return 'loading...';
+    if (error) return <pre>{error.message}</pre>
+    if (data) 
+    console.log(data.userEmail.name)
+    const username = data.userEmail.name;
+    localStorage.setItem("name", username)
+
+    const localName = localStorage.getItem("name")
+    
     return (
 <div>
-
-  <p>Email: {localStorage.getItem("email")}</p>
-
   <NameForm />
 
   <WeatherForm />

@@ -1,68 +1,102 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import { createUser } from '../utils/mutations';
-import {gql, useMutation} from '@apollo/client'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const CREATE_USER_MUTATION = gql`mutation CreateUser($name: String!, $email: String!, $password: String!) {
-    createUser(name: $name, email: $email, password: $password) {
-      token
-      user {
-        name
-        email  
-      }
-    }
-  }`
+import { useMutation } from '@apollo/client';
+import { CREATE_USER } from '../utils/mutations';
+
+import Auth from '../utils/auth';
 
 const Register = () => {
-    const [formData, setFormData] = React.useState({
-        name: "",
-        email: "",
-        password: "",
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+  const [addProfile, { error, data }] = useMutation(CREATE_USER);
+
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+
+    try {
+      const { data } = await addProfile({
+        variables: { ...formState },
       });
-    
-      function handleChange(event) {
-        const { name, value } = event.target;
-        setFormData((prevFormData) => {
-          return {
-            ...prevFormData,
-            [name]: value,
-          };
-        });
-      }
-    
-      const [upload] = useMutation(CREATE_USER_MUTATION)
-        
-      async function handleSubmit(event) {
-        event.preventDefault();
-        let newUser = formData;
-        console.log(newUser);
-        await upload({variables: formData})
-      }
-      return (
-        <pre>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Name"
-              onChange={handleChange}
-              name="name"
-            />
-            <input
-              type="text"
-              placeholder="Email"
-              onChange={handleChange}
-              name="email"
-            />
-            <input
-              type="text"
-              placeholder="Password"
-              onChange={handleChange}
-              name="password"
-            />
-            <button>Submit</button>
-          </form>
-        </pre>
-      );
-}
+
+      Auth.login(data.addProfile.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  return (
+    <main className="flex-row justify-center mb-4">
+      <div className="col-12 col-lg-10">
+        <div className="card">
+          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <div className="card-body">
+            {data ? (
+              <p>
+                Success! You may now head{' '}
+                <Link to="/Login">to the Login page.</Link>
+              </p>
+            ) : (
+              <form onSubmit={handleFormSubmit}>
+                <input
+                  className="form-input"
+                  placeholder="Your username"
+                  name="name"
+                  type="text"
+                  value={formState.name}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your email"
+                  name="email"
+                  type="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="******"
+                  name="password"
+                  type="password"
+                  value={formState.password}
+                  onChange={handleChange}
+                />
+                <button
+                  className="btn btn-block btn-info"
+                  style={{ cursor: 'pointer' }}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            )}
+
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
 
 export default Register;
