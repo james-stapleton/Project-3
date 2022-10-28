@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { gql, useQuery } from '@apollo/client';
+
 
 const QUERY_NAME = gql`
 query UserEmail($email: String!) {
@@ -29,6 +31,7 @@ const Navbar = () => {
       <Link to="Login"><button className="btn btn-outline-success" type="button">Logout</button></Link>
       <Link to ="/Register"><button>Register</button></Link>
     </form>
+    <p>Welcome {name}</p>
   </nav> 
   )
 }
