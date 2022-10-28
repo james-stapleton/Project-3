@@ -12,6 +12,8 @@ const Home = () => {
     return (
 <div>
 
+  <p>Email: {localStorage.getItem("email")}</p>
+
   <NameForm />
 
   <WeatherForm />
