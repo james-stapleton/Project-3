@@ -2,7 +2,17 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import {Link, useLocation} from 'react-router-dom'
 import DrinkCard from "../components/DrinkCard";
-import ViewedQuery from '../components/ViewedQuery';
+
+const VIEW_QUERY = gql`
+  {
+    cocktails {
+        name
+        views
+    }
+  }
+`;
+
+
 
 const MostViewedCocktails = (props) => {
 

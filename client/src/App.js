@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Recipe from './pages/Recipe'
 import Register from "./pages/Register"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
