@@ -4,14 +4,15 @@ export default function DrinkCard({cocktail, rating}) {
 
     const {name, ingredients, instructions, views, avgRating, image} = cocktail;
     const style = {
-        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
         transition: "0.3s",
+        background-color: "#D7B877",
         margins: "10px",
-        border: "solid black"
+        padding: "10px",
+        border: "0px"
     }
 
     return (
-        <div className="card" style={style}>
+        <div id="recipe-card-data" className="card" style={style}>
             <h1>{name}</h1>
             {ingredients&& <p>{ingredients}</p>}
             {instructions && <p>{instructions}</p>}
