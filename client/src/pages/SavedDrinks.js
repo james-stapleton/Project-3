@@ -25,9 +25,11 @@ const SavedDrinks = () => {
 
       const cocktailArray = data.userEmail.cocktails;
 
+      const localName = localStorage.getItem("name")
+
       return (
         <pre>
-        <h1>Saved Drinks</h1>
+        <h1>Saved Drinks for {localName}</h1>
         <ul>
             {cocktailArray.map((cocktail) =>
             <pre>
