@@ -25,6 +25,7 @@ export default function Recipe (props) {
         avgRating
         views
         image
+        videoID
       }
     }
   `;
@@ -58,7 +59,7 @@ export default function Recipe (props) {
         <SaveButton name = {data.cocktail.name} />
         <UnsaveButton name = {data.cocktail.name} />
         {/* {dropdown } */}
-        <Video name = {name}/>
+        <Video name = {name} videoID={data.cocktail.videoID}/>
         </div> 
     )
 }
