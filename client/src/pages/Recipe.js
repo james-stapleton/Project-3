@@ -56,7 +56,7 @@ export default function Recipe (props) {
    
 
     return (
-        <div >
+        <div id="recipe-layout">
         <div id="recipe-card">
         <DrinkCard rated = {rated} cocktail={data.cocktail} />
         <Rating rated = {rated} onClick = {() =>setRated} name = {name}/>

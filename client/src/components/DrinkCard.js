@@ -7,7 +7,7 @@ export default function DrinkCard({ cocktail, rating }) {
     const style = {
         transition: "0.3s",
         backgroundColor: "#D7B877",
-        color: "#876827",
+        color: "#FFFFFF",
         margins: "10px",
         border: "0px",
     }
