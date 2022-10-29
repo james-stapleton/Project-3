@@ -5,6 +5,7 @@ import Rating from '../components/Rating'
 import DrinkCard from '../components/DrinkCard';
 import SaveButton from '../components/SaveButton';
 import UnsaveButton from '../components/UnsaveButton'
+import Video from '../components/Video';
 
 export default function Recipe (props) {
 
@@ -24,6 +25,7 @@ export default function Recipe (props) {
         avgRating
         views
         image
+        videoID
       }
     }
   `;
@@ -57,6 +59,7 @@ export default function Recipe (props) {
         <SaveButton name = {data.cocktail.name} />
         <UnsaveButton name = {data.cocktail.name} />
         {/* {dropdown } */}
+        <Video name = {name} videoID={data.cocktail.videoID}/>
         </div> 
     )
 }

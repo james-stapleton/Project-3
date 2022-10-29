@@ -29,6 +29,7 @@ const typeDefs = gql`
     views: Int
     avgRating: Float
     image: String
+    videoID: String
   }
 
   input CocktailInput {
@@ -84,6 +85,7 @@ const typeDefs = gql`
     unSaveCocktailName(email: String!, name: String!): Users
     upsertCocktailRating(name: String!, rating: RatingInput): Cocktails
     incrementViews(name: String!): Cocktails
+    setVideoID(name: String!, videoID: String!): Cocktails
   }
 `;
 
