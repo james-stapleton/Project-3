@@ -2,37 +2,37 @@
   padding: 0px;
 }
 
-.button {
-    height: 30px;
-    width: 158px;
-    background-color: #62938F;
-    border-radius: 8px;
-    font-size: 14px;
-    color: white;
-    border: 0;
-    margin: 2px;
-    cursor: pointer;
-    transition-duration: 0.3s;
+.blue-button {
+  height: 30px;
+  width: 158px;
+  background-color: #62938F;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  border: 0;
+  margin: 2px;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
 
-.button:hover {
-    background-color: #446663;
-  }
+.blue-button:hover {
+  background-color: #446663;
+}
 
 .login-buttons {
-    display: flex;
-    align-items: right;
-  }
+  display: flex;
+  align-items: right;
+}
 
-  .col-4 {
-    padding: 0px;
-  }
+.col-4 {
+  padding: 0px;
+}
 
-  .container-fluid {
-    width: 100%;
-    background-image: url('../../public/Images/Banner_Bg_02.png');
-    background-repeat: no-repeat;
-    background-position: top right;
+.container-fluid {
+  width: 100%;
+  background-image: url('../../public/Images/Banner_Bg_02.png');
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .page-buttons {

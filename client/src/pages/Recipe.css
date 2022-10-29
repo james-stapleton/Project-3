@@ -1,14 +1,13 @@
 #recipe-card {
     background-color: #D7B877;
     width: 780px;
-    height: 428px;
+    /* height: 428px; */
     margin: 20px;
     border: 0px;
-    border-radius: 10px;
     padding: 10px;
 }
 
-button {
+/* button {
     height: 30px;
     width: 158px;
     background-color: #62938F;
@@ -19,4 +18,8 @@ button {
     margin: 2px;
     cursor: pointer;
     transition-duration: 0.3s;
+} */
+
+h1 {
+    font-size: 40px;
 }

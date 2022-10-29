@@ -4,14 +4,13 @@ import "./DrinkCard.css";
 export default function DrinkCard({ cocktail, rating }) {
 
     const { name, ingredients, instructions, views, avgRating, image } = cocktail;
-    // const style = {
-    //     transition: "0.3s",
-    //     backgroundColor: "#D7B877",
-    //     color: "#876827",
-    //     margins: "10px",
-    //     border: "0px",
-    //     borderRadius: "10px",
-    // }
+    const style = {
+        transition: "0.3s",
+        backgroundColor: "#D7B877",
+        color: "#876827",
+        margins: "10px",
+        border: "0px",
+    }
 
     return (
         <div id="recipe-card-data" className="card">
@@ -19,14 +18,16 @@ export default function DrinkCard({ cocktail, rating }) {
                 <h1>{name}</h1>
                 <div class="row">
                     <div class="col">
+                        <text>Ingredints:</text>
                         {ingredients && <p>{ingredients}</p>}
+                        Instructions:
                         {instructions && <p>{instructions}</p>}
                         {views && <p>Views: {views}</p>}
                         {avgRating && <p>Rating: {avgRating}</p>}
                         {rating && <p>You rated this drink {rating}</p>}
                     </div>
                     <div class="col">
-                        <img src={image} width="33%"/>
+                        <img src={`../Images/${image}`} width="100%" />
                     </div>
                 </div>
             </div>

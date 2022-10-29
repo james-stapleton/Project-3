@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import {Link, useLocation} from 'react-router-dom'
 import DrinkCard from "../components/DrinkCard";
+import "./MostViewedCocktails.css";
 
 const VIEW_QUERY = gql`
   {

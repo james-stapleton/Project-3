@@ -56,11 +56,13 @@ export default function Recipe (props) {
    
 
     return (
+        <div >
         <div id="recipe-card">
         <DrinkCard rated = {rated} cocktail={data.cocktail} />
         <Rating rated = {rated} onClick = {() =>setRated} name = {name}/>
         <SaveButton name = {data.cocktail.name} />
         <UnsaveButton name = {data.cocktail.name} />
-        </div> 
+        </div>
+        </div>
     )
 }
