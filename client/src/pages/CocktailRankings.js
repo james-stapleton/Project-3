@@ -8,6 +8,7 @@ const RATING_QUERY = gql`
     cocktails {
         name
         avgRating
+        image
     }
   }
 `;
