@@ -9,6 +9,7 @@ const VIEW_QUERY = gql`
     cocktails {
         name
         views
+        image
     }
   }
 `;

@@ -12,3 +12,7 @@ h1 {
     color: #FFFFFF;
     background-color: #332F2E;
 }
+
+#drink-image {
+    border-radius: 0px;
+}

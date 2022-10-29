@@ -27,7 +27,7 @@ export default function DrinkCard({ cocktail, rating }) {
                         {rating && <p>You rated this drink {rating}</p>}
                     </div>
                     <div class="col">
-                        <img src={`../Images/${image}`} width="100%" />
+                        <img id="drink-image" src={`../Images/${image}`} width="100%" />
                     </div>
                 </div>
             </div>
