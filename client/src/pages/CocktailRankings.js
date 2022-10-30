@@ -19,13 +19,15 @@ const CocktailRankings = (props) => {
     if (loading) return 'Loading...';
     if (error) return <pre>{error.message}</pre>
 
-    console.log(data);
+    // console.log(data.cocktails.sort(({avgRating}) =>  ));
+
+    // dataArray = data.cocktails.sort();
 
     return (
         <pre>
         <h1>Top Rated Drinks</h1>
         <ul>
-            {data.cocktails.map((cocktail) =>
+            {data.cocktails.sort((a, b) => a.avgRating > b.avgRating ? -1 : 1).map((cocktail) =>
             <Link to = {`/Recipe/${cocktail.name}`}>
             <DrinkCard cocktail={cocktail} />
             </Link>
