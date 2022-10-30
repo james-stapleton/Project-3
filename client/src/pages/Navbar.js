@@ -5,10 +5,12 @@ import "./Navbar.css";
 
 const Navbar = () => {
 
-  const refreshPage = () => window.location.reload();
+    const refreshPage = () => window.location.reload(); 
+    const localName = localStorage.getItem("name")
+  
 
-
-  return (
+    return (
+      
     <nav className="navbar">
       <form className="container-fluid justify-content-md-center form-inline">
         <div class="row bg-banner">

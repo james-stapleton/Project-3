@@ -158,6 +158,10 @@ const resolvers = {
     },
     incrementViews: async(parent, {name}) => {
       const incrementCocktail = await Cocktails.findOneAndUpdate({name}, {$inc: {views: 1}}, {new: false})
+    },
+    setVideoID: async (parent, {name, videoID}) => {
+      const cocktail = await Cocktails.findOneAndUpdate({name: name}, {videoID: videoID}, {new: true} );
+      return cocktail;
     }
   },
 };

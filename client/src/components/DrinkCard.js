@@ -1,7 +1,7 @@
 import React from "react";
 import "./DrinkCard.css";
 
-export default function DrinkCard({ cocktail, rating }) {
+export default function DrinkCard({brand, state, cocktail, rated}) {
 
     const { name, ingredients, instructions, views, avgRating, image } = cocktail;
     const style = {
@@ -12,9 +12,12 @@ export default function DrinkCard({ cocktail, rating }) {
         border: "0px",
     }
 
+    console.log("rated", rated)
+
     return (
-        <div id="recipe-card-data" className="card">
+        <div key = {state} id="recipe-card-data" className="card">
             <div class="container">
+            <p>{state}</p>
                 <h1>{name}</h1>
                 <div class="row">
                     <div id="drink-info-container" class="col">
@@ -24,13 +27,14 @@ export default function DrinkCard({ cocktail, rating }) {
                         {instructions && <p>{instructions}</p>}
                         {views && <p>Views: {views}</p>}
                         {avgRating && <p>Rating: {avgRating}</p>}
-                        {rating && <p>You rated this drink {rating}</p>}
+                        {rated && <p>You rated this drink {rated}</p>}
                     </div>
                     <div id="drink-image-container" class="col">
                         <img id="drink-image" src={`../Images/${image}`} />
                     </div>
                 </div>
             </div>
+            {brand && <p>Brand: {brand} </p>}
         </div>
     )
 }
