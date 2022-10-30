@@ -8,7 +8,6 @@ const VIEW_QUERY = gql`
   {
     cocktails {
         name
-        views
         image
     }
   }
@@ -26,7 +25,8 @@ const MostViewedCocktails = (props) => {
     if (error) return <pre>{error.message}</pre>
 
     return (
-        <pre>
+      <div id="most-viewed-layout">
+        <div id="most-viewed-card">
         <h1>Most Viewed Drinks</h1>
         <ul>
             {data.cocktails.map((cocktail) =>
@@ -35,7 +35,9 @@ const MostViewedCocktails = (props) => {
             </Link>
             )}
         </ul>
-        </pre>
+        <ul><button></button></ul>
+        </div>
+        </div>
     )
 }
 

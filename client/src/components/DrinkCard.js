@@ -17,16 +17,16 @@ export default function DrinkCard({ cocktail, rating }) {
             <div class="container">
                 <h1>{name}</h1>
                 <div class="row">
-                    <div class="col">
-                        <text>Ingredints:</text>
+                    <div id="drink-info-container" class="col">
+                        {/* <text>Ingredints:</text> */}
                         {ingredients && <p>{ingredients}</p>}
-                        Instructions:
+                        {/* Instructions: */}
                         {instructions && <p>{instructions}</p>}
                         {views && <p>Views: {views}</p>}
                         {avgRating && <p>Rating: {avgRating}</p>}
                         {rating && <p>You rated this drink {rating}</p>}
                     </div>
-                    <div class="col drink-image-conatiner">
+                    <div id="drink-image-container" class="col">
                         <img id="drink-image" src={`../Images/${image}`} />
                     </div>
                 </div>

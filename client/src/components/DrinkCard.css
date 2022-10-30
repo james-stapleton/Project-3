@@ -18,8 +18,11 @@ h1 {
     width: 300px;
 }
 
-.drink-image-container{
-    width: 370px;
+#drink-image-container {
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
+/* 
+.drink-info.container {
+    width: 33%;
+} */
