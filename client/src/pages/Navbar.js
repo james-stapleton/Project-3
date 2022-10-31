@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import "./Navbar.css";
+import Auth from '../utils/auth';
 
+const logout = (event) => {
+  event.preventDefault();
+  Auth.logout();
+};
 
 const Navbar = () => {
 
@@ -25,7 +30,7 @@ const Navbar = () => {
           </div>
           <div class="col login-buttons">
             <Link to="Login"><button type="button">Login</button></Link>
-            <Link to="Login"><button type="button">Logout</button></Link>
+            <button className="btn btn-lg btn-light m-2" onClick={logout}> Logout </button>
             <Link to="/Register"><button>Register</button></Link>
           </div>
         </div>
