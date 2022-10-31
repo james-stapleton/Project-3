@@ -6,3 +6,9 @@
     display: flex;
     justify-content: center;
 }
+
+#views {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
