@@ -27,12 +27,24 @@ export default function Video({name, videoID}) {
 
     // if not in local storage, fetch before checking DB. Then update DB. This will keep updating the DB with fresh searches so that hopefully the video never gets old or deleted. 
 
-    if ( !localvideoID || localvideoID === '') {
+    if ( !localvideoID || localvideoID === '' || localvideoID == null) {
         console.log("NO video ID in local storage so we have to fetch")
         
         fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDnqR3K3X57AM3byrSumlR1nT2BXYn2FxM&q=${name}-cocktail&type=video&part=snippet`)
          .then((response) => response.json())
          .then((data) => {
+                console.log("data error : ",data.error.message)
+                if (data.error) {
+                    console.log("We're in the right place", videoID)
+                    localStorage.setItem([name], videoID)
+                    return (
+                        <pre class="video-container">
+                            {console.log("Render from DB: ", videoID)}
+            <YouTube videoId={videoID}/>
+            </pre>
+                    )
+                    //return video ID from database
+                }
                 console.log("raw data ", data)
                 console.log("new videoID ", data.items[0].id.videoId)
                 let fetchVideoID = data.items[0].id.videoId
@@ -50,7 +62,7 @@ export default function Video({name, videoID}) {
             updateVideo({variables: {name: name, videoId: `${fetchVideoID}`}}); //update the DB with the fetchVideo ID
 
             // ! Error handling in here somewhere. Not exactly sure how yet
-            }).catch((err) => console.log(err));
+            }).catch((err) => console.log("Error message"));
             localvideoID = localStorage.getItem([name]);
         }
 
