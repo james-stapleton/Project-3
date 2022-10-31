@@ -21,13 +21,7 @@ const CocktailRankings = (props) => {
   if (loading) return 'Loading...';
   if (error) return <pre>{error.message}</pre>
 
-<<<<<<< HEAD
-    // console.log(data.cocktails.sort(({avgRating}) =>  ));
-
-    // dataArray = data.cocktails.sort();
-=======
   console.log(data);
->>>>>>> fcf4ae424ad5e28bb291b43595cae8f70990f61e
 
   
   return (
