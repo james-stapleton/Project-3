@@ -27,3 +27,8 @@ body {
     cursor: pointer;
     transition-duration: 0.3s;
 }
+
+.unsave-button {
+    display: flex;
+    justify-content: center;
+}
