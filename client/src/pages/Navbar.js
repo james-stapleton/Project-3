@@ -25,15 +25,15 @@ const Navbar = () => {
             <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" class="logo"/></a>
           </div>
           <div class="col page-buttons">
-            <Link reloadDocument to="/MostViewedDrinks" ><button class="blue-button" type="button">Most Viewed Cocktails</button></Link>
-            <Link reloadDocument to="/CocktailRankings"><button class="blue-button" type="button">Cocktail Rankings</button></Link>
-            <Link reloadDocument to="/SavedDrinks"><button class="blue-button" type="button">Saved Drinks</button></Link>
-            <Link to="/UploadDrink"><button class="blue-button" type="button">Upload Drink</button></Link>
+            <Link reloadDocument to="/MostViewedDrinks" ><button className="blue-button" type="button">Most Viewed Cocktails</button></Link>
+            <Link reloadDocument to="/CocktailRankings"><button className="blue-button" type="button">Cocktail Rankings</button></Link>
+            <Link reloadDocument to="/SavedDrinks"><button className="blue-button" type="button">Saved Drinks</button></Link>
+            <Link to="/UploadDrink"><button className="blue-button" type="button">Upload Drink</button></Link>
           </div>
           <div class="col login-buttons">
-            {localName === null && <button type="button" class="log-buttons"><Link to="Login">Login</Link></button>}
-            {localName != null && <button type="button" class="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>}
-            {localName === null && <button class="log-buttons"><Link to="/Register">Register</Link></button>}
+            {localName === null && <button type="button" id="login" className="log-buttons"><Link to="Login">Login</Link></button>}
+            {localName != null && <button type="button" className="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>}
+            {localName === null && <button className="log-buttons"><Link to="/Register">Register</Link></button>}
           </div>
         </div>
       </form>
