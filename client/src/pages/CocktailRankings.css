@@ -1,0 +1,8 @@
+#rankings-card {
+    width: 350px;
+}
+
+#rankings-layout{
+    display: flex;
+    justify-content: center;
+}

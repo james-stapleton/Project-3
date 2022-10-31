@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import "./Navbar.css";
 import Auth from '../utils/auth';
-
 
 const logout = (event) => {
   event.preventDefault();
@@ -17,20 +17,25 @@ const Navbar = () => {
     return (
       
     <nav className="navbar">
-    <form className="form-inline">
-      <Link to = "/MostViewedDrinks" ><button className="btn btn-outline-success" type="button">Most Viewed Cocktails</button></Link>
-      <Link to ="/CocktailRankings"><button className="btn btn-outline-success" type="button">Cocktail Rankings</button></Link>
-      <Link to = "/SavedDrinks"><button className="btn btn-outline-success" type="button">Saved Drinks</button></Link>
-      <Link to="/"><h1 className="text-white">Cocktail Curator</h1></Link>
-      <Link to="/UploadDrink"><button className="btn btn-outline-success" type="button">Upload Drink</button></Link>
-      <Link to="Login"><button className="btn btn-outline-success" type="button">Login</button></Link>
-      <button className="btn btn-lg btn-light m-2" onClick={logout}> Logout </button>
-      <Link to ="/Register"><button>Register</button></Link>
-    </form>
-
-    <h1>signed in as {localName}</h1>
-
-  </nav> 
+      <form className="container-fluid justify-content-md-center form-inline">
+        <div class="row bg-banner">
+          <div class="col image-container">
+            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" class="logo" /></a>
+          </div>
+          <div class="col page-buttons">
+            <Link reloadDocument to="/MostViewedDrinks" ><button class="blue-button" type="button">Most Viewed Cocktails</button></Link>
+            <Link reloadDocument to="/CocktailRankings"><button class="blue-button" type="button">Cocktail Rankings</button></Link>
+            <Link reloadDocument to="/SavedDrinks"><button class="blue-button" type="button">Saved Drinks</button></Link>
+            <Link to="/UploadDrink"><button class="blue-button" type="button">Upload Drink</button></Link>
+          </div>
+          <div class="col login-buttons">
+            <Link to="Login"><button type="button">Login</button></Link>
+            <button className="btn btn-lg btn-light m-2" onClick={logout}> Logout </button>
+            <Link to="/Register"><button>Register</button></Link>
+          </div>
+        </div>
+      </form>
+    </nav>
   )
 }
 
