@@ -25,7 +25,7 @@ const resolvers = {
       return Cocktails.findOne({ name: name });
     },
     cocktailByIng: async (parent, { string }) => {
-      return Cocktails.find({ ingredients: { $regex: string } });
+      return Cocktails.find({ ingredients: { $regex: string } }).sort({views: -1});
     },
     // get the aray of ratings for a cocktail
     cocktailRating: async (parent, { name }) => {
