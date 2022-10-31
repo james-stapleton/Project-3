@@ -136,7 +136,7 @@
         "name": "Amaretto-Sour",
         "ingredients": "2oz Amaretto, 1oz Lemon Juice, 0.5oz Egg Whites, Dash of Angostura Bitters",
         "instructions": "Add the amaretto, lemon juice, egg white and bitters to a cocktail shaker together with ice. Shake until the outside of the shaker is frosted, then strain into an old fashioned glass with ice. Garnish with a lemon slice and a maraschino cherry and serve.",
-        "image": "AmarettoSor.png"
+        "image": "AmarettoSour.png"
     },
     {
         "name": "Pina-Colada",
@@ -298,7 +298,7 @@
         "name": "White-Russian",
         "ingredients": "1.5oz Vodka, 0.75oz Coffee Liquer, 1oz Cream",
         "instructions": "In a lowball glass with ice add the vodka and coffee liqueur. Give the mixture a stir to combine the ingredients before floating the cream on top. Stir slowly and serve.",
-        "image": "WhieRussian.png"
+        "image": "WhiteRussian.png"
     },
     {
         "name": "Hot-Toddy",
