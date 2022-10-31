@@ -25,6 +25,20 @@
   align-items: right;
 }
 
+.log-buttons {
+  height: 30px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .col-4 {
   padding: 0px;
 }
@@ -45,4 +59,8 @@
 .login-buttons {
   max-width: 210px;
   justify-content: right;
+}
+
+.image-container {
+  min-width: fit-content;
 }
