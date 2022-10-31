@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import Auth from '../utils/auth';
 
+
+const logout = (event) => {
+  event.preventDefault();
+  Auth.logout();
+};
 
 const Navbar = () => {
 
@@ -18,7 +24,7 @@ const Navbar = () => {
       <Link to="/"><h1 className="text-white">Cocktail Curator</h1></Link>
       <Link to="/UploadDrink"><button className="btn btn-outline-success" type="button">Upload Drink</button></Link>
       <Link to="Login"><button className="btn btn-outline-success" type="button">Login</button></Link>
-      <Link to="Login"><button className="btn btn-outline-success" type="button">Logout</button></Link>
+      <button className="btn btn-lg btn-light m-2" onClick={logout}> Logout </button>
       <Link to ="/Register"><button>Register</button></Link>
     </form>
 
