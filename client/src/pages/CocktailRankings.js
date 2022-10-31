@@ -31,10 +31,9 @@ const CocktailRankings = (props) => {
           {data.cocktails.sort((a, b) => a.avgRating > b.avgRating ? -1 : 1).map((cocktail) =>
             <Link to={`/Recipe/${cocktail.name}`}>
               <DrinkCard cocktail={cocktail} />
-              <p>Rating: {cocktail.avgRating}</p>
+              <p id="rankings">Rating: {cocktail.avgRating}</p>
             </Link>
           )}
-        <ul><button></button></ul>
       </div>
     </div>
   )
