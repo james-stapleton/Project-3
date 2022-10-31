@@ -57,15 +57,20 @@ query CocktailByIng($string: String!) {
           onChange = {handleChange}
         //   value = {formData.city}
         />
-        <button onClick={handleSearch} className="button">Search</button>
+        <button onClick={handleSearch} class="search-button">Search</button>
         {data ?
         
         data.cocktailByIng.map((cocktail) => {
             console.log(cocktail)
             return (
+              <div class="recipe-layout">
+                <div class="recipe-card">
             <Link to = {`/Recipe/${cocktail.name}`}>
              <DrinkCard cocktail = {cocktail} />
-            </Link>)
+            </Link>
+        </div>
+      </div>
+            )
         })
         
         : <p></p>
