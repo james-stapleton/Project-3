@@ -11,6 +11,7 @@ db.once('open', async () => {
 
   await Cocktails.deleteMany({});
 
+  
   const cocktails = await Cocktails.insertMany(cocktailData);
 
   const users = await Users.insertMany(userData);

@@ -30,6 +30,7 @@ export default function NameForm() {
   });
 
   var currentDrink = "";
+  const [message, setMessage] = React.useState('')
 
   function drinkRec(currentTemp) {
     var drinksArray = []; //empty array that will be filled with curated drink suggestions
@@ -59,6 +60,7 @@ export default function NameForm() {
       setDrinkName(drink);
       console.log("searchValue: ", drink);
       console.log("It's a scorcher today! Try a refreshing " + drink);
+      setMessage(`Currently ${currentTemp} Degrees. It's a scorcher today! Try a refreshing:`)
     } else if (currentTemp > 60 && currentTemp <= 85) {
       drinksArray = [
         "Moscow-Mule",
@@ -79,6 +81,7 @@ export default function NameForm() {
       setDrinkName(drink);
       console.log("searchValue: ", drink);
       console.log("Nice Day! Relax with an easy-sipping " + drink);
+      setMessage(`Currently ${currentTemp} Degrees. Nice Day! Relax with an easy-sipping:`)
     } else if (currentTemp > 40 && currentTemp <= 60) {
       drinksArray = [
         "Old-Fashioned",
@@ -97,10 +100,8 @@ export default function NameForm() {
       setDrinkName(drink);
       console.log("searchValue: ", drink);
       console.log(data);
-      console.log(
-        "It's a bit chilly! You need a little liquid warmth from a stiff " +
-          drink
-      );
+      console.log("It's a bit chilly! You need a little liquid warmth from a stiff " +drink);
+      setMessage(`Currently ${currentTemp} Degrees. It's a bit chilly! You need a little liquid warmth from a stiff:`)
     } else {
       drinksArray = [
         "Irish-Coffee",
@@ -119,7 +120,9 @@ export default function NameForm() {
       setDrinkName(drink);
       console.log("searchValue: ", drink);
       console.log("Brr. Warm up with a " + drink);
+      setMessage(`Currently ${currentTemp} Degrees. Brr. Warm up with a:`)
     }
+    console.log("message!------------------------",message)
     return currentDrink;
   }
 
@@ -141,9 +144,6 @@ export default function NameForm() {
         var currentTemp = response.main.temp;
         console.log(currentTemp);
         drinkRec(currentTemp);
-
-        // currentTempEl.textContent =
-        //   "Temp: " + Math.round(currentTemp) + " \u00B0F";
       });
   }
 
@@ -194,6 +194,7 @@ export default function NameForm() {
     <div class="recipe-layout">
       <div class="recipe-card">
           <Link to = {`/Recipe/${data.cocktail.name}`}>
+            <h1>{message}</h1>
             <DrinkCard cocktail={data.cocktail} />
         </Link>
         </div>

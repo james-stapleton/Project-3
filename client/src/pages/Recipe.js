@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import Rating from '../components/Rating'
 import DrinkCard from '../components/DrinkCard';
 import SaveButton from '../components/SaveButton';
-import UnsaveButton from '../components/UnsaveButton'
 import Video from '../components/Video';
 import "./Recipe.css";
 
@@ -59,7 +58,6 @@ export default function Recipe(props) {
         <DrinkCard rated={rated} cocktail={data.cocktail} />
         <Rating rated={rated} setRating={handleRating} name={name} />
         <SaveButton name={data.cocktail.name} />
-        <UnsaveButton name={data.cocktail.name} />
         <Video name={name} videoID={data.cocktail.videoID} />
         </div>
       </div>
