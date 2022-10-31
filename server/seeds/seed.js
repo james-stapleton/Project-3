@@ -12,7 +12,14 @@ db.once('open', async () => {
   await Cocktails.deleteMany({});
 
   
-  const cocktails = await Cocktails.insertMany(cocktailData);
+  const cocktailsWithSearchFields = cocktailData.map((cocktail) => (
+    {
+        ...cocktail,
+        searchName: cocktail.name.toLowerCase(),
+        searchIngredient: cocktail.ingredients.toLowerCase()
+    }
+))
+  const cocktails = await Cocktails.insertMany(cocktailsWithSearchFields);
 
   const users = await Users.insertMany(userData);
 

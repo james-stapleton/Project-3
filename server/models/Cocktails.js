@@ -29,7 +29,9 @@ const cocktailSchema = new Schema(
       type: Number,
       default: 0,
     },
-    videoID: String
+    videoID: String,
+    searchName: String,
+    searchIngredient: String
   },
   {
     toJSON: {

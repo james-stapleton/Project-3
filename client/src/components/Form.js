@@ -3,8 +3,8 @@ import { gql, useMutation } from "@apollo/client";
 import DrinkCard from './DrinkCard'
 import { Link } from "react-router-dom";
 
-const CREATE_COCKTAIL_MUTATION = gql`mutation Mutation($name: String!, $ingredients: String!, $instructions: String!) {
-    createCocktail(name: $name, ingredients: $ingredients, instructions: $instructions) {
+const CREATE_COCKTAIL_MUTATION = gql`mutation Mutation($name: String!, $ingredients: String!, $instructions: String!, $searchName: String, $searchIngredient: String) {
+    createCocktail(name: $name, ingredients: $ingredients, instructions: $instructions, searchName: $searchName, searchIngredient: $searchIngredient) {
     name
     ingredients
     instructions  
@@ -16,6 +16,8 @@ export default function Form() {
     name: "",
     ingredients: "",
     instructions: "",
+    searchName: "",
+    searchIngredient: ""
   });
 
   function handleChange(event) {
@@ -34,9 +36,13 @@ export default function Form() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    let newDrink = formData;
-    console.log(newDrink);
-    await upload({variables: formData})
+    let newDrink = {
+      ...formData,
+      searchName: formData.name.toLowerCase(),
+      searchIngredient: formData.ingredients.toLowerCase()
+    }
+    console.log("new drink to upload:",newDrink);
+    await upload({variables: newDrink})
     createCard();
   }
 
