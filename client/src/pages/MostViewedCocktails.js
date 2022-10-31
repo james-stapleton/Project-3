@@ -9,6 +9,7 @@ const VIEW_QUERY = gql`
     cocktails {
         name
         image
+        views
     }
   }
 `;
@@ -39,9 +40,9 @@ const MostViewedCocktails = () => {
             {data.cocktails.map((cocktail) =>
               <Link key={cocktail.name} to={`/Recipe/${cocktail.name}`}>
                 <DrinkCard cocktail={cocktail} />
+              <p id="views">Views: {cocktail.views}</p>
               </Link>
             )}
-            <button class="blue-button">Recipe</button>
         </div>
       </div>
     )
