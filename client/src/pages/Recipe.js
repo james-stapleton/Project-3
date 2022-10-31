@@ -54,26 +54,14 @@ export default function Recipe(props) {
   }
 
   return (
-    <div id="recipe-layout">
-      <div id="recipe-card">
+    <div class="recipe-layout">
+      <div class="recipe-card">
         <DrinkCard rated={rated} cocktail={data.cocktail} />
         <Rating rated={rated} setRating={handleRating} name={name} />
         <SaveButton name={data.cocktail.name} />
         <UnsaveButton name={data.cocktail.name} />
-        
         <Video name={name} videoID={data.cocktail.videoID} />
-        <div class="dropdown">
-          <button class="blue-button" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-            Brands
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-            <li><a class="dropdown-item active" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
         </div>
       </div>
-    </div>
   )
 }
