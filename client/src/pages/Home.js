@@ -23,16 +23,19 @@ const Home = () => {
       variables : {email: userEmail}
     });
     if (loading) return 'loading...';
-    if (error) return <pre>{error.message}</pre>
-    if (data) 
-    console.log(data.userEmail.name)
-    const username = data.userEmail.name;
-    localStorage.setItem("name", username)
+    if (error) console.log(error)
+    if (data) {
 
+      let username = data.userEmail.name;
+       localStorage.setItem("name", username)
+    }
     const localName = localStorage.getItem("name")
+    
     
     return (
 <div>
+
+  <h1>Welcome {localName ? localName : "!"}</h1>
   <NameForm />
 
   <WeatherForm />

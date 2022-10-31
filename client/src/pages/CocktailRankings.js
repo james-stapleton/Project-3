@@ -31,6 +31,7 @@ const CocktailRankings = (props) => {
           {data.cocktails.map((cocktail) =>
             <Link to={`/Recipe/${cocktail.name}`}>
               <DrinkCard cocktail={cocktail} />
+              <p>Rating: {cocktail.avgRating}</p>
             </Link>
           )}
         <ul><button></button></ul>

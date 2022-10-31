@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import DrinkCard from "./DrinkCard";
 
-
 export default function NameForm() {
   const [formData, setFormData] = React.useState("");
 
@@ -13,42 +12,35 @@ export default function NameForm() {
   function handleChange(event) {
     setFormData(event.target.value);
   }
-const NAME_QUERY = gql`
-query Cocktails($name: String!) {
-  cocktail(name: $name) {
-    name
-    ingredients
-    instructions
-    avgRating
-    views
-    image
-  }
-}
-`;
-    const [search, {loading, data, error}] = useLazyQuery(NAME_QUERY, {
-        variables : {name: searchValue}
-      });
-
+  const NAME_QUERY = gql`
+    query Cocktails($name: String!) {
+      cocktail(name: $name) {
+        name
+        ingredients
+        instructions
+        avgRating
+        views
+        image
+      }
+    }
+  `;
+  const [search, { loading, data, error }] = useLazyQuery(NAME_QUERY, {
+    variables: { name: searchValue },
+  });
 
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(searchValue);
-    setSearchValue(formData)
+    setSearchValue(formData);
 
-
-    setTimeout(function() {
-      
+    setTimeout(function () {
+      console.log(searchValue);
+    }, 10000);
     console.log(searchValue);
-
-    }, 10000)
-    console.log(searchValue);
-
-
-
-    search()
-    if (loading) return 'loading...';
-    if (error) return <pre>{error.message}</pre>
-
+    search();
+    if (loading) return "loading...";
+    if (error) console.log(error);
+    if (!data) console.log(data);
   };
 
   return (
@@ -61,16 +53,20 @@ query Cocktails($name: String!) {
           id="search-name-input"
           className="form-input"
           placeholder="e.g. Margarita"
-          type = "text"
-          onChange = {handleChange}
-        //   value = {formData.city}
+          type="text"
+          onChange={handleChange}
+          //   value = {formData.city}
         />
-        <button onClick={handleSearch} className="button">Search</button>
-        {data ?
-        <Link to = {`/Recipe/${data.cocktail.name}`}>
-         <DrinkCard cocktail={data.cocktail} />
-        </Link>
-         : <p></p> }
+        <button onClick={handleSearch} className="button">
+          Search
+        </button>
+        {data ? (
+           <Link to={`/Recipe/${data?.cocktail?.name}`}>
+           <DrinkCard cocktail={data?.cocktail} />
+         </Link>
+        ) : ( null
+         
+        )}
       </form>
     </div>
   );

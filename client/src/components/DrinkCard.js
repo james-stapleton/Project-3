@@ -3,6 +3,11 @@ import "./DrinkCard.css";
 
 export default function DrinkCard({brand, state, cocktail, rated}) {
 
+    if (!cocktail ) {
+        return (
+            <p>Please enter valid drink</p>
+        )
+    }
     const { name, ingredients, instructions, views, avgRating, image } = cocktail;
     const style = {
         transition: "0.3s",
