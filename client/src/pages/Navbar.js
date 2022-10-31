@@ -20,7 +20,7 @@ const Navbar = () => {
       <form className="container-fluid justify-content-md-center form-inline">
         <div class="row bg-banner">
           <div class="col image-container">
-            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" class="logo" /></a>
+            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" class="logo"/></a>
           </div>
           <div class="col page-buttons">
             <Link reloadDocument to="/MostViewedDrinks" ><button class="blue-button" type="button">Most Viewed Cocktails</button></Link>
@@ -29,9 +29,9 @@ const Navbar = () => {
             <Link to="/UploadDrink"><button class="blue-button" type="button">Upload Drink</button></Link>
           </div>
           <div class="col login-buttons">
-            <Link to="Login"><button type="button">Login</button></Link>
-            <button type='button' onClick={logout}> Logout </button>
-            <Link to="/Register"><button>Register</button></Link>
+            <button type="button" class="log-buttons"><Link to="Login">Login</Link></button>
+            <button type="button" class="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>
+            <button class="log-buttons"><Link to="/Register">Register</Link></button>
           </div>
         </div>
       </form>
