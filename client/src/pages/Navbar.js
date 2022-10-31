@@ -11,9 +11,11 @@ const logout = (event) => {
 const Navbar = () => {
 
     const refreshPage = () => window.location.reload(); 
-    const localName = localStorage.getItem("name")
+    const [localName, setLocalName] = React.useState(localStorage.getItem("name"));
+    React.useEffect(() => {
+    setLocalName(localStorage.getItem("name"))
+    },[])
   
-
     return (
       
     <nav className="navbar">
@@ -29,9 +31,9 @@ const Navbar = () => {
             <Link to="/UploadDrink"><button class="blue-button" type="button">Upload Drink</button></Link>
           </div>
           <div class="col login-buttons">
-            <button type="button" class="log-buttons"><Link to="Login">Login</Link></button>
-            <button type="button" class="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>
-            <button class="log-buttons"><Link to="/Register">Register</Link></button>
+            {localName === null && <button type="button" class="log-buttons"><Link to="Login">Login</Link></button>}
+            {localName != null && <button type="button" class="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>}
+            {localName === null && <button class="log-buttons"><Link to="/Register">Register</Link></button>}
           </div>
         </div>
       </form>
