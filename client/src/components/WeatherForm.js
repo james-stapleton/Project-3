@@ -187,13 +187,17 @@ export default function NameForm() {
           onChange={handleChange}
           //   value = {formData.city}
         />
-        <button onClick={handleSearch} className="button">
+        <button onClick={handleSearch} class="search-button">
           Search
         </button>
         {data ? (
+    <div class="recipe-layout">
+      <div class="recipe-card">
           <Link to = {`/Recipe/${data.cocktail.name}`}>
             <DrinkCard cocktail={data.cocktail} />
-        </Link>) : (
+        </Link>
+        </div>
+      </div>) : (
           <p></p>
         )}
       </form>
