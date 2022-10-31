@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# The-Cocktail-Curator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to The Cocktail Curator! We've created a page to offer recommendations based on the temperature of the city you're searching, as well as the option to search by ingredient and name to see all the possible choices out there! There is also an option to save those drinks to a list associated to your account for you to refer to later for when the opportunity arises. The ability to see the most viewed drinks, ranking and the ability to upload your own drinks. Once you go and find the drink you're after you're able to also watch a video on how you'd be able to make it just below!.
 
-## Available Scripts
+Here is our deployed site on heroku! https://the--cocktail--curator.herokuapp.com/
 
-In the project directory, you can run:
 
-### `npm start`
+## Home
+Here is an example of the home screen. You are met with a welcome screen and options to search by the name of the drink, your cities weather as well as ingredient.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![home example](./client/public/readmeImgs/homeScreen.png)
 
-### `npm test`
+## Logged in & Search feature
+After logging in you're greeted by the site. Here also is a search giving back the drinks information, ingredients and instructions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![logged in search example](./client/public/readmeImgs/loggedIn.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Card Example
+You can then click on the card of a drink you're interested in and see more options, to save a drink to your own saved drinks list, give it a rating based on how you've enjoyed it and be given a video on how to create the drink below.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![card example for the drinks](./client/public/readmeImgs/cardExample.png)
 
-### `npm run eject`
+## Saved Drinks
+Heres an example of the drinks you've saved to your list, they'll be displayed in a list for you to go back to.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![most viewed drinks example](./client/public/readmeImgs/savedDrinks.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Most Viewed
+Heres an example of the most viewed drinks.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+![most viewed drinks example](./client/public/readmeImgs/mostViewed.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Top Rated
+The rankings of drinks shown in order of the best.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+![rankings example](./client/public/readmeImgs/topRated.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Upload Drinks
+The upload drink page offers the option to add a name, its ingredients and the instructions on how to make said cocktail.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![upload example](./client/public/readmeImgs/uploadDrinks.png)
