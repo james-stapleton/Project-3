@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
           <div class="col login-buttons">
             <Link to="Login"><button type="button">Login</button></Link>
-            <button className="btn btn-lg btn-light m-2" onClick={logout}> Logout </button>
+            <button type='button' onClick={logout}> Logout </button>
             <Link to="/Register"><button>Register</button></Link>
           </div>
         </div>

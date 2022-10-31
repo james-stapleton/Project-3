@@ -6,6 +6,9 @@ import Form from '../components/Form';
 const UploadDrink = () => {
 
     const localName = localStorage.getItem("name")
+    if (!localName) {
+        return `Please sign in to upload a drink`
+    }
 
     return (
         <pre>
