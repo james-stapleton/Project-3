@@ -1,8 +1,8 @@
-#MVT {
-    width: 330px;
+#rankings-card {
+    width: 350px;
 }
 
-#most-viewed-layout{
+#rankings-layout{
     display: flex;
     justify-content: center;
 }
