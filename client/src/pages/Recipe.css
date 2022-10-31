@@ -1,0 +1,19 @@
+#recipe-card {
+    background-color: #D7B877;
+    width: 780px;
+    /* height: 428px; */
+    margin: 20px;
+    border: 0px;
+    padding: 10px;
+}
+
+#recipe-layout{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* h1 {
+    font-size: 40px;
+} */

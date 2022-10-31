@@ -1,0 +1,16 @@
+body {
+    background-color: #332F2E;
+}
+
+.logo {
+    margin-top: 9px;
+    margin-left: 25px;
+}
+
+/* .image-container {
+    height: 250px;
+} */
+
+#root {
+    color: #D7B877;
+} 

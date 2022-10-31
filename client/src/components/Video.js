@@ -19,8 +19,7 @@ export default function Video({name, videoID}) {
     let localvideoID = localStorage.getItem([name]);
     if (localvideoID && localvideoID.length > 0) {
         return (
-            <pre>
-            <h1>Video component {localvideoID}</h1>
+            <pre class="video-container">
             <YouTube videoId={localvideoID}/>
             </pre>
         )
@@ -56,11 +55,8 @@ export default function Video({name, videoID}) {
         }
 
         return (
-            <pre>
-    
-            <h1>Video component {localvideoID}</h1>
+            <pre class="video-container">
             <YouTube videoId={localvideoID}/>
-    
             </pre>
         )
         
