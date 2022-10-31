@@ -15,7 +15,6 @@ query UserEmail($email: String!) {
   }
 }
 `
-
 const Home = () => {
   let userEmail = localStorage.getItem("email")
     console.log(userEmail)
