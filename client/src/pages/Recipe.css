@@ -10,11 +10,27 @@
 .recipe-layout{
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
-
+.video-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
 
 /* h1 {
     font-size: 40px;
 } */
+
+@media screen and (max-width: 768px) {
+
+.recipe-card {
+    background-color: #D7B877;
+    width: 390px;
+    /* height: 428px; */
+    margin: 20px;
+    border: 0px;
+    padding: 10px;
+}
+    
+}

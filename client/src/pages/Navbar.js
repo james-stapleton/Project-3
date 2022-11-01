@@ -38,10 +38,10 @@ const Navbar = () => {
     return (
       
     <nav className="navbar">
-      <form className="container-fluid justify-content-md-center form-inline">
+      <form id="navbar-form" className="container-fluid justify-content-md-center form-inline">
         <div className="row bg-banner">
           <div className="col image-container">
-            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" className="logo"/></a>
+            <a href="/"><img src="../Images/Logo_Finished.png" alt="Logo" class="logo"/></a>
           </div>
           <div className="col page-buttons">
             <Link reloadDocument to="/MostViewedDrinks" ><button className="blue-button" type="button">Most Viewed Cocktails</button></Link>

@@ -3,6 +3,7 @@ body {
 }
 
 .logo {
+    width: 398px;
     margin-top: 9px;
     margin-left: 25px;
 }
@@ -81,4 +82,11 @@ h1 {
     margin-bottom: 15px;
     padding-top: 5px;
     padding-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1500px) {
+
+
+
 }
