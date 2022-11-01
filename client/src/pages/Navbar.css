@@ -21,6 +21,7 @@
 }
 
 .login-buttons {
+  min-width: 400px;
   display: flex;
   align-items: right;
 }
