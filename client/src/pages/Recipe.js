@@ -10,7 +10,7 @@ import "./Recipe.css";
 export default function Recipe(props) {
 
   const { name } = useParams();
-  console.log("Cocktail name from paramms: ",name)
+  console.log("Cocktail name from paramms: ", name)
   const [rated, setRated] = React.useState('');
 
   function handleRating(userRating) {
@@ -55,15 +55,19 @@ export default function Recipe(props) {
   }
 
   return (
-    <div className="recipe-layout">
-      <div className="recipe-card">
+    <div id="recipe-layout">
+      <div id="recipe-card">
         <DrinkCard rated={rated} cocktail={data.cocktailCard} />
+        <div id="recipe-card-footer">
         <Rating rated={rated} setRating={handleRating} name={name} />
+        <br></br>
         <SaveButton name={data.cocktailCard.name} />
-        <div class="video-container">
+        </div>
+          <h2>Instructional Video</h2>
+        <div id="video-container">
           <Video name={name} videoID={data.cocktailCard.videoID} />
-          </div>
         </div>
       </div>
+    </div>
   )
 }
