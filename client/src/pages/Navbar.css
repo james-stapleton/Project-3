@@ -65,3 +65,46 @@ a:hover {
 .image-container {
   min-width: fit-content;
 }
+
+@media screen and (max-width: 768px) {
+
+  .container-fluid {
+    width: auto;
+    background-image: none;
+  }
+
+  .page-buttons {
+    min-width: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    }
+
+  .blue-button {
+    height: auto;
+    width: auto;
+    background-color: #62938F;
+    border-radius: 0px;
+    font-size: 14px;
+    color: white;
+    margin: 1px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+
+  .image-container {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .login-buttons {
+    width: auto;
+  }
+
+  .logo {
+    width: 360px;
+    margin-top: 10px;
+    margin-left: 0px;
+    align-items: center;
+  }
+}
