@@ -1,9 +1,15 @@
-#rankings-card {
-    width: 350px;
+#rankings-layout {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#rankings-layout{
+
+#rankings-card {
+    /* max-width: 350px; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -11,4 +17,12 @@
     color: white;
     display: flex;
     justify-content: center;
+}
+
+#rankings-card a {
+    width:350px;
+}
+
+#rankings-card h1 {
+    font-size: 30px;
 }
