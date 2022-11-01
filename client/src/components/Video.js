@@ -34,28 +34,27 @@ export default function Video({name, videoID}) {
          .then((response) => response.json())
          .then((data) => {
                 console.log("data error : ",data.error.message)
+                let isFetched = true;
                 if (data.error) {
                     console.log("We're in the right place", videoID)
                     localStorage.setItem([name], videoID)
-                    return (
-                        <pre class="video-container">
-                            {console.log("Render from DB: ", videoID)}
-            <YouTube videoId={videoID}/>
-            </pre>
-                    )
-                    //return video ID from database
+                    console.log("value should have been set to local stoarge", localStorage.getItem([name]))
+                    isFetched = false;
+                    // return (
+                    //     <div class="video-container">
+                    //         {console.log("Render from DB: ", videoID)}
+                    //         <YouTube videoId={localvideoID}/>
+                    //     </div>
+                    // )
                 }
-                console.log("raw data ", data)
-                console.log("new videoID ", data.items[0].id.videoId)
-                let fetchVideoID = data.items[0].id.videoId
-             if (!fetchVideoID) {
-                fetchVideoID = videoID;
-                console.log("No video ID found from youtube. Quota is up, use from database: ", fetchVideoID)
-                localStorage.setItem([name], fetchVideoID)
-            // ! above 2 lines say if we fail to get the ID from the fetch, get it from the prop which came from the DB
-            }
+                let fetchVideoID = '';
+                if (isFetched) {
+                    let fetchVideoID = data.items[0].id.videoId
+           
                 console.log("id from fetch:", fetchVideoID)
                 localStorage.setItem([name], fetchVideoID);
+                }
+                
 
                 console.log("Regardless of fetch vs db, localstorage should still have a valid video ID by this point :", localStorage.getItem([name]));
             // ! Regardless of fetch vs DB, localstorage is still set with a working(hopefully) value. This allows the same return below (again, hopefully)
@@ -64,29 +63,14 @@ export default function Video({name, videoID}) {
             // ! Error handling in here somewhere. Not exactly sure how yet
             }).catch((err) => console.log("Error message"));
             localvideoID = localStorage.getItem([name]);
+            console.log("Getting id from local storage at end of fetch function", localvideoID)
         }
-
+        console.log("right before return")
         return (
             <pre class="video-container">
+                {console.log("Should get here")}
             <YouTube videoId={localvideoID}/>
             </pre>
         )
-        
-        
-            // if not in local storage, and fetch fails, pull from DB. All DB entries will need to be seeded for this failsafe to work. Any that aren't will fail to load a video if a user surpasses the quota then checks a drink no one has viewed before. 
-        
-
-    // fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDnqR3K3X57AM3byrSumlR1nT2BXYn2FxM&q=${name}&type=video&part=snippet`)
-    // .then((response) => response.json())
-    // .then((data) => {
-    //     console.log(data)
-    //     console.log(data.items[0].id.videoId)
-    //     let fetchVideoID = data.items[0].id.videoId
-    //     console.log("id from fetch:", fetchVideoID)
-    //     localStorage.setItem([name], "this will be an id");
-    // })
-
-    
-   
     
 }
