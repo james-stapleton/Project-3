@@ -20,6 +20,7 @@
 }
 
 #most-viewed-card a {
+    transition: transform .2s;
     width:350px;
     margin-bottom: 50px;
 }
@@ -31,4 +32,8 @@
 
 #most-viewed-card img {
     border-radius: 0px 0px 8px 8px;
+}
+
+#most-viewed-card a:hover {
+    transform: scale(.975);
 }

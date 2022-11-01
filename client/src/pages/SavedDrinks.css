@@ -25,3 +25,11 @@
 #saved-card img {
     border-radius: 0px 0px 8px 8px;
 }
+
+#saved-link {
+    transition: transform .2s;
+}
+
+#saved-link:hover {
+    transform: scale(.975);
+}

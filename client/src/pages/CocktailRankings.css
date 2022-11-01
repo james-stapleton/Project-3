@@ -21,6 +21,7 @@
 }
 
 #rankings-card a {
+    transition: transform .2s;
     width:350px;
     margin-bottom: 50px;
 }
@@ -42,4 +43,8 @@
 
 #rankings-card img {
     border-radius: 0px 0px 8px 8px;
+}
+
+#rankings-card a:hover {
+    transform: scale(.975);
 }

@@ -35,9 +35,11 @@ const SavedDrinks = () => {
         <div id="saved-card">
           {cocktailArray.map((cocktail) =>
             <div id="saved-data">
+              <div id="saved-link">
               <Link to={`/Recipe/${cocktail.name}`}>
                 <DrinkCard cocktail={cocktail} />
               </Link>
+              </div>
               <p class="unsave-button"><UnsaveButton name={cocktail.name} /></p>
             </div>
           )}
