@@ -2,8 +2,8 @@
     background-color: #D7B877;
     color: #332F2E;
     border: 0px;
-    border-radius: 0px;
-    padding-bottom: 20px;
+    border-radius: 12px;
+    padding-bottom: 18px;
     margin: 10px;
 }
 
@@ -20,29 +20,23 @@ h4 {
 
 #drink-image {
     width: 300px;
-    
 }
 
 #drink-image-container {
     display: flex;
     justify-content: right;
 }
-/* 
-.drink-info.container {
-    width: 33%;
-} */
 
 @media screen and (max-width: 768px) {
 
+    #recipe-card-data {
+        width: auto;
+        background-color: #D7B877;
+        color: #332F2E;
+        border: 0px;
+        border-radius: 0px;
+        padding-bottom: 20px;
+        margin: 10px;
+    }
 
-#recipe-card-data {
-    width: auto;
-    background-color: #D7B877;
-    color: #332F2E;
-    border: 0px;
-    border-radius: 0px;
-    padding-bottom: 20px;
-    margin: 10px;
-}
-    
 }

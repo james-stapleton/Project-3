@@ -3,7 +3,7 @@ import { gql, useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import DrinkCard from '../components/DrinkCard';
 import UnsaveButton from '../components/UnsaveButton'
-import "./MostViewedCocktails.css";
+import "./SavedDrinks.css";
 
 const SavedDrinks = () => {
 
@@ -29,17 +29,19 @@ const SavedDrinks = () => {
   const localName = localStorage.getItem("name")
 
   return (
-    <div class="most-viewed-layout">
-      <div class="most-viewed-card">
-        <h1>Saved Drinks for {localName}</h1>
-        {cocktailArray.map((cocktail) =>
-          <div>
-            <Link to={`/Recipe/${cocktail.name}`}>
-              <DrinkCard cocktail={cocktail} />
-            </Link>
-            <p class="unsave-button"><UnsaveButton name={cocktail.name} /></p>
-          </div>
-        )}
+    <div>
+      <h1>Saved Drinks for {localName}</h1>
+      <div id="saved-layout">
+        <div id="saved-card">
+          {cocktailArray.map((cocktail) =>
+            <div id="saved-data">
+              <Link to={`/Recipe/${cocktail.name}`}>
+                <DrinkCard cocktail={cocktail} />
+              </Link>
+              <p class="unsave-button"><UnsaveButton name={cocktail.name} /></p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

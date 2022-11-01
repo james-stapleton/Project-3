@@ -1,9 +1,9 @@
 import React from "react";
 import "./DrinkCard.css";
 
-export default function DrinkCard({brand, state, cocktail, rated}) {
+export default function DrinkCard({ brand, state, cocktail, rated }) {
 
-    if (!cocktail ) {
+    if (!cocktail) {
         return (
             <p>Please enter valid drink</p>
         )
@@ -20,9 +20,9 @@ export default function DrinkCard({brand, state, cocktail, rated}) {
     console.log("rated", rated)
 
     return (
-        <div key = {state} id="recipe-card-data" className="card">
+        <div key={state} id="recipe-card-data" className="card">
             <div className="container">
-            <p>{state}</p>
+                <p>{state}</p>
                 <h1>{name}</h1>
                 <div className="row">
                     <div id="drink-info-container" className="col">
