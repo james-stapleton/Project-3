@@ -27,3 +27,31 @@ body {
     cursor: pointer;
     transition-duration: 0.3s;
 }
+
+.unsave-button {
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    color: #FFFFFF;
+    margin-top: 3px;
+}
+
+#search-name-form {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#search-city-form {
+    margin-top: 12px;
+    text-align: center;
+}
+
+#search-ingredient-form {
+    text-align: center;
+}
+
+.search-title {
+    margin-right: 10px;
+}

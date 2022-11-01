@@ -47,7 +47,7 @@ export default function NameForm() {
     <div>
       <form id="search-name-form">
         <label id="search-name-label" htmlFor="search-input">
-          Search by name:
+          <h4 class="search-title">Search by name:</h4>
         </label>
         <input
           id="search-name-input"
@@ -60,6 +60,8 @@ export default function NameForm() {
         <button onClick={handleSearch} className="search-button">
           Search
         </button>
+        <br></br>
+        <br></br>
         {data ? (
     <div className="recipe-layout">
       <div className="recipe-card">

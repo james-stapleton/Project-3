@@ -177,7 +177,7 @@ export default function NameForm() {
     <div>
       <form id="search-city-form">
         <label id="search-city-label" htmlFor="search-input">
-          Search by city:
+          <h4 class="search-title">Search by city:</h4>
         </label>
         <input
           id="search-city-input"
@@ -190,11 +190,13 @@ export default function NameForm() {
         <button onClick={handleSearch} className="search-button">
           Search
         </button>
+        <br></br>
+        <br></br>
+            <h2>{message}</h2>
         {data ? (
     <div className="recipe-layout">
       <div className="recipe-card">
           <Link to = {`/Recipe/${data.cocktail.name}`}>
-            <h1>{message}</h1>
             <DrinkCard cocktail={data.cocktail} />
         </Link>
         </div>

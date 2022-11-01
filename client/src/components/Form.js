@@ -2,12 +2,14 @@ import React from "react";
 import { gql, useMutation } from "@apollo/client";
 import DrinkCard from './DrinkCard'
 import { Link } from "react-router-dom";
+import "./Form.css";
 
 const CREATE_COCKTAIL_MUTATION = gql`mutation Mutation($name: String!, $ingredients: String!, $instructions: String!, $searchName: String, $searchIngredient: String) {
     createCocktail(name: $name, ingredients: $ingredients, instructions: $instructions, searchName: $searchName, searchIngredient: $searchIngredient) {
     name
     ingredients
-    instructions  
+    instructions
+    image
     }
   }`
 
@@ -52,34 +54,39 @@ export default function Form() {
 
 
   return (
-    <pre>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Drink name"
-          onChange={handleChange}
-          name="name"
-        />
-        <input
-          type="text"
-          placeholder="Drink ingredients"
-          onChange={handleChange}
-          name="ingredients"
-        />
-        <input
-          type="text"
-          placeholder="Drink instructions"
-          onChange={handleChange}
-          name="instructions"
-        />
-        <button>Submit</button>
-      </form>
+    <div>
+      <div>
+          <form class="upload-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Drink name"
+              onChange={handleChange}
+              name="name"
+            />
+            <input
+              type="text"
+              placeholder="Drink ingredients"
+              onChange={handleChange}
+              name="ingredients"
+            />
+            <input
+              type="text"
+              placeholder="Drink instructions"
+              onChange={handleChange}
+              name="instructions"
+            />
+            <button class="search-button">Submit</button>
+          </form>
+</div>
+          {displayCard &&
+    <div class="recipe-layout">
+      <div class="recipe-card">
 
-    {displayCard && 
-    
-    <Link to={`/Recipe/${formData.name}`}>
-        <DrinkCard cocktail={formData}/>
-    </Link>}
-    </pre>
+            <Link to={`/Recipe/${formData.name}`}>
+              <DrinkCard cocktail={formData} />
+            </Link>        </div>
+      </div>}
+
+      </div>
   );
 }

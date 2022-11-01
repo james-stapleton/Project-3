@@ -1,8 +1,8 @@
-#most-viewed-card {
+.most-viewed-card {
     width: 350px;
 }
 
-#most-viewed-layout{
+.most-viewed-layout{
     display: flex;
     justify-content: center;
 }

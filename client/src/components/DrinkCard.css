@@ -14,6 +14,10 @@ h1 {
     background-color: #332F2E;
 }
 
+h4 {
+    text-align: center;
+}
+
 #drink-image {
     width: 300px;
 }

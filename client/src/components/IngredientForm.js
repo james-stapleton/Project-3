@@ -47,7 +47,7 @@ query CocktailByIng($string: String!) {
     <div>
       <form id="search-ingredient-form">
         <label id="search-ingredient-label" htmlFor="search-input">
-          Search by ingredient:
+          <h4 class="search-title">Search by ingredient:</h4>
         </label>
         <input
           id="search-ingredient-input"

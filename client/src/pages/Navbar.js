@@ -49,10 +49,11 @@ const Navbar = () => {
             <Link reloadDocument to="/SavedDrinks"><button className="blue-button" type="button">Saved Drinks</button></Link>
             <Link to="/UploadDrink"><button className="blue-button" type="button">Upload Drink</button></Link>
           </div>
-          <div className="col login-buttons">
-            {localName === null && <button type="button" id="login" className="log-buttons"><Link to="Login">Login</Link></button>}
-            {localName != null && <button type="button" className="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>}
-            {localName === null && <button className="log-buttons"><Link to="/Register">Register</Link></button>}
+          <div class="col login-buttons">
+          <h5>{localName ? `Welcome ${localName}\u00A0` : ""}</h5>
+            {localName === null && <button type="button" class="log-buttons"><Link to="Login">Login</Link></button>}
+            {localName != null && <button type="button" class="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>}
+            {localName === null && <button class="log-buttons"><Link to="/Register">Register</Link></button>}
           </div>
         </div>
       </form>

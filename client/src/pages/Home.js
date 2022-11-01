@@ -34,7 +34,9 @@ const Home = () => {
     return (
 <div>
 
-  <h1>Welcome {localName ? localName : "!"}</h1>
+<h1>Welome to the Cocktail Curator</h1>
+<h4>Let's begin your search for the perfect cocktail...</h4>
+  
   <NameForm />
 
   <WeatherForm />
