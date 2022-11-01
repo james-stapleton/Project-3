@@ -177,7 +177,7 @@ export default function NameForm() {
     <div>
       <form id="search-city-form">
         <label id="search-city-label" htmlFor="search-input">
-          <h4>Search by city:</h4>
+          <h4 class="search-title">Search by city:</h4>
         </label>
         <input
           id="search-city-input"

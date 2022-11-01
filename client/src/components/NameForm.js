@@ -47,7 +47,7 @@ export default function NameForm() {
     <div>
       <form id="search-name-form">
         <label id="search-name-label" htmlFor="search-input">
-          <h4>Search by name:</h4>
+          <h4 class="search-title">Search by name:</h4>
         </label>
         <input
           id="search-name-input"
