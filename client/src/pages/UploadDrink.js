@@ -2,6 +2,7 @@ import React from 'react';
 import { gql, useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom'
 import Form from '../components/Form';
+import "./UploadDrink.css";
 
 const UploadDrink = () => {
 
@@ -11,13 +12,19 @@ const UploadDrink = () => {
     }
 
     return (
-        <pre>
+        <div class="container">
+        <div id="upload-drink-form">
         <h1>Upload a Drink</h1>
-        <h2>Would you like to share your perfect concoction {localName}?</h2>
+        <br></br>
+        <div>
+        <h3>Would you like to share your perfect concoction {localName}?</h3>
+        </div>
+        <br></br>
 
         <Form />
 
-        </pre>
+        </div>
+        </div>
     )
 }
 
