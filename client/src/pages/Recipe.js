@@ -57,10 +57,10 @@ export default function Recipe(props) {
   return (
     <div className="recipe-layout">
       <div className="recipe-card">
-        <DrinkCard rated={rated} cocktail={data.cocktail} />
+        <DrinkCard rated={rated} cocktail={data.cocktailCard} />
         <Rating rated={rated} setRating={handleRating} name={name} />
-        <SaveButton name={data.cocktail.name} />
-        <Video name={name} videoID={data.cocktail.videoID} />
+        <SaveButton name={data.cocktailCard.name} />
+        <Video name={name} videoID={data.cocktailCard.videoID} />
         </div>
       </div>
   )
