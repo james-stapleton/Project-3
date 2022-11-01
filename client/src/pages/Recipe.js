@@ -60,7 +60,9 @@ export default function Recipe(props) {
         <DrinkCard rated={rated} cocktail={data.cocktailCard} />
         <Rating rated={rated} setRating={handleRating} name={name} />
         <SaveButton name={data.cocktailCard.name} />
-        <Video name={name} videoID={data.cocktailCard.videoID} />
+        <div class="video-container">
+          <Video name={name} videoID={data.cocktailCard.videoID} />
+          </div>
         </div>
       </div>
   )

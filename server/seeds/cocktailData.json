@@ -195,7 +195,8 @@
     {
         "name": "White-Wine-Sangria",
         "ingredients": "1 bottle dry white wine (such as pinot grigio or chenin blanc), chilled 4 ounces Lillet blanc 1 medium peach, pitted and sliced 1 green apple, cored and sliced 1 lemon, cut into wedges 3 mint sprigs Club soda, chilled, to top (optional)",
-        "instructions": "Add wine, Lillet, fruit and mint into a pitcher and stir to combine. Chill for up to four hours. Divide between 4 to 6 wine goblets and top with club soda, if desired."
+        "instructions": "Add wine, Lillet, fruit and mint into a pitcher and stir to combine. Chill for up to four hours. Divide between 4 to 6 wine goblets and top with club soda, if desired.",
+        "image": "WhiteWineSangria.png"
     },
     {
         "name": "Dirty-Martini",
