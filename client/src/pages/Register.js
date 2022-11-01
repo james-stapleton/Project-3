@@ -45,11 +45,12 @@ const Register = () => {
       <div class="recipe-layout">
         <div class="recipe-card">
           <h1>Sign Up</h1>
+          <br></br>
           <div>
             {data ? (
-              <p>
+              <p class="dark-text">
                 Success! You may now head to the {' '}
-                <Link to="/Login">Login page.</Link>
+                <Link to="/Login" id="login-link">Login page.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -84,6 +85,10 @@ const Register = () => {
                 >
                   Submit
                 </button>
+              <p class="dark-text">
+                <br></br>
+                Please choose a username, enter your email address, and create a unique password.
+              </p>
               </form>
             )}
 

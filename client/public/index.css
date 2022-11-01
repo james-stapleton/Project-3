@@ -68,3 +68,17 @@ h5 {
     height: 30px;
     width: 232px;
 }
+
+.dark-text {
+    color: #332F2E;
+}
+
+#login-link {
+    color: #FFFFFF;
+}
+
+h1 {
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
