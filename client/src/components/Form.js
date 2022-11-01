@@ -8,7 +8,8 @@ const CREATE_COCKTAIL_MUTATION = gql`mutation Mutation($name: String!, $ingredie
     createCocktail(name: $name, ingredients: $ingredients, instructions: $instructions) {
     name
     ingredients
-    instructions  
+    instructions
+    image
     }
   }`
 
@@ -49,7 +50,7 @@ export default function Form() {
   return (
     <div>
       <div>
-          <form onSubmit={handleSubmit}>
+          <form class="upload-form" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Drink name"
@@ -71,15 +72,15 @@ export default function Form() {
             <button class="search-button">Submit</button>
           </form>
 </div>
+          {displayCard &&
     <div class="recipe-layout">
       <div class="recipe-card">
-          {displayCard &&
 
             <Link to={`/Recipe/${formData.name}`}>
               <DrinkCard cocktail={formData} />
-            </Link>}
-        </div>
-      </div>
+            </Link>        </div>
+      </div>}
+
       </div>
   );
 }

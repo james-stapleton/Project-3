@@ -13,17 +13,15 @@ const UploadDrink = () => {
 
     return (
         <div class="container">
-        <div id="upload-drink-form">
-        <h1>Upload a Drink</h1>
-        <br></br>
-        <div>
-        <h3>Would you like to share your perfect concoction {localName}?</h3>
-        </div>
-        <br></br>
-
-        <Form />
-
-        </div>
+            <div id="upload-drink-form">
+                <h1>Upload a Drink</h1>
+                <br></br>
+                <h4>Would you like to share your perfect concoction {localName}?</h4>
+                <br></br>
+                <div class="upload-form">
+                    <Form />
+                </div>
+            </div>
         </div>
     )
 }

@@ -31,6 +31,7 @@ const Navbar = () => {
             <Link to="/UploadDrink"><button class="blue-button" type="button">Upload Drink</button></Link>
           </div>
           <div class="col login-buttons">
+          <h6>Welcome {localName ? localName : "!"}</h6>
             {localName === null && <button type="button" class="log-buttons"><Link to="Login">Login</Link></button>}
             {localName != null && <button type="button" class="log-buttons" onClick={logout}><Link to="Login">Logout</Link></button>}
             {localName === null && <button class="log-buttons"><Link to="/Register">Register</Link></button>}
