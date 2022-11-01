@@ -44,7 +44,7 @@ h5 {
 }
 
 #search-city-form {
-    margin-top: 12px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -54,4 +54,17 @@ h5 {
 
 .search-title {
     margin-right: 10px;
+}
+
+#weather-message {
+    margin-top: 20px;
+}
+
+#main-greeting {
+    margin-top: 70px;
+}
+
+.form-input {
+    height: 30px;
+    width: 232px;
 }

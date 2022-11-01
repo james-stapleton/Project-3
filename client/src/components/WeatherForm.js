@@ -190,10 +190,8 @@ export default function NameForm() {
         <button onClick={handleSearch} className="search-button">
           Search
         </button>
+            <h2 id="weather-message">{message}</h2>
       </form>
-        <br></br>
-        <br></br>
-            <h2>{message}</h2>
         {data ? (
     <div className="recipe-layout">
       <div className="recipe-card">

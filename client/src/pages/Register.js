@@ -41,15 +41,15 @@ const Register = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <main>
+      <div class="recipe-layout">
+        <div class="recipe-card">
+          <h1>Sign Up</h1>
+          <div>
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/Login">to the Login page.</Link>
+                Success! You may now head to the {' '}
+                <Link to="/Login">Login page.</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -78,7 +78,7 @@ const Register = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  class="search-button"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
