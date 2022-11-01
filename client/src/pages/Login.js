@@ -47,7 +47,7 @@ const Login = (props) => {
     <div class="recipe-layout">
       <div class="recipe-card">
           <h1>Login</h1>
-          <div className="card-body">
+          <div>
             {data ? (
               <p>
                 Success! You may now head{' '}
