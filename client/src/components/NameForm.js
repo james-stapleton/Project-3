@@ -59,7 +59,7 @@ export default function NameForm() {
         />
         <button onClick={handleSearch} className="search-button">
           Search
-        </button>
+        </button>      </form>
         <br></br>
         <br></br>
         {data ? (
@@ -73,7 +73,7 @@ export default function NameForm() {
         ) : ( null
          
         )}
-      </form>
+
     </div>
   );
 }

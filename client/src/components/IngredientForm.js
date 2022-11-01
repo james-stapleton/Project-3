@@ -58,6 +58,7 @@ query CocktailByIng($string: String!) {
         //   value = {formData.city}
         />
         <button onClick={handleSearch} className="search-button">Search</button>
+      </form>
         {data ?
         
         data.cocktailByIng.map((cocktail) => {
@@ -75,7 +76,6 @@ query CocktailByIng($string: String!) {
         
         : <p></p>
          }
-      </form>
     </div>
   );
 }
