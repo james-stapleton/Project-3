@@ -23,7 +23,7 @@ export default function SaveButton(props) {
 
     return (
         <pre>
-            <button class="blue-button" onClick={handleSave}> Save this Drink </button>
+            <button className="blue-button" onClick={handleSave}> Save this Drink </button>
         </pre>
     )
 }

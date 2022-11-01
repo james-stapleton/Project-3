@@ -21,11 +21,11 @@ export default function DrinkCard({brand, state, cocktail, rated}) {
 
     return (
         <div key = {state} id="recipe-card-data" className="card">
-            <div class="container">
+            <div className="container">
             <p>{state}</p>
                 <h1>{name}</h1>
-                <div class="row">
-                    <div id="drink-info-container" class="col">
+                <div className="row">
+                    <div id="drink-info-container" className="col">
                         {/* <text>Ingredints:</text> */}
                         {ingredients && <p>{ingredients}</p>}
                         {/* Instructions: */}
@@ -34,7 +34,7 @@ export default function DrinkCard({brand, state, cocktail, rated}) {
                         {avgRating && <p>Rating: {avgRating}</p>}
                         {rated && <p>You rated this drink {rated}</p>}
                     </div>
-                    <div id="drink-image-container" class="col">
+                    <div id="drink-image-container" className="col">
                         <img id="drink-image" src={`../Images/${image}`} />
                     </div>
                 </div>
