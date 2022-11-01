@@ -43,10 +43,10 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    <main>
+    <div class="recipe-layout">
+      <div class="recipe-card">
+          <h1>Login</h1>
           <div className="card-body">
             {data ? (
               <p>
@@ -72,14 +72,16 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="search-button"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Submit
                 </button>
-                <p>
-                  Don't have an account? <Link to = "/Register"><button className="btn btn-outline-success" type="button">Sign up!</button></Link>
+                <br></br>
+                <br></br>
+                <p class="dark-text">
+                  Don't have an account? <Link to = "/Register" id="login-link">Sign up!</Link>
                 </p>
               </form>
             )}

@@ -55,25 +55,24 @@ export default function NameForm() {
           placeholder="e.g. Margarita"
           type="text"
           onChange={handleChange}
-          //   value = {formData.city}
+        //   value = {formData.city}
         />
         <button onClick={handleSearch} className="search-button">
           Search
         </button>
-        <br></br>
-        <br></br>
-        {data ? (
-    <div className="recipe-layout">
-      <div className="recipe-card">
-           <Link to={`/Recipe/${data?.cocktail?.name}`}>
-           <DrinkCard cocktail={data?.cocktail} />
-         </Link>
-        </div>
-      </div>
-        ) : ( null
-         
-        )}
       </form>
+      {data ? (
+        <div className="recipe-layout">
+          <div className="recipe-card">
+            <Link to={`/Recipe/${data?.cocktail?.name}`}>
+              <DrinkCard cocktail={data?.cocktail} />
+            </Link>
+          </div>
+        </div>
+      ) : (null
+
+      )}
+
     </div>
   );
 }
