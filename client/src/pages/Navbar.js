@@ -2,19 +2,38 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import "./Navbar.css";
 import Auth from '../utils/auth';
+import {gql, useQuery} from '@apollo/client'
 
 const logout = (event) => {
   event.preventDefault();
   Auth.logout();
 };
 
+const QUERY_NAME = gql`
+query UserEmail($email: String!) {
+  userEmail(email: $email) {
+    name  
+  }
+}
+`
+
 const Navbar = () => {
 
-    const refreshPage = () => window.location.reload(); 
-    const [localName, setLocalName] = React.useState(localStorage.getItem("name"));
-    React.useEffect(() => {
-    setLocalName(localStorage.getItem("name"))
-    },[])
+  let userEmail = localStorage.getItem("email")
+
+  const {loading, data, error} = useQuery(QUERY_NAME, {
+    variables : {email: userEmail}
+  });
+  if (loading) return 'loading...';
+  if (error) console.log(error)
+
+   if (data) {
+    let username = data.userEmail.name;
+       localStorage.setItem("name", username)
+   }
+
+   const localName = localStorage.getItem("name")
+
   
     return (
       
