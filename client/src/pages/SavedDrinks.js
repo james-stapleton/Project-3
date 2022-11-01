@@ -33,12 +33,12 @@ const SavedDrinks = () => {
       <div class="most-viewed-card">
         <h1>Saved Drinks for {localName}</h1>
         {cocktailArray.map((cocktail) =>
-          <pre>
+          <div>
             <Link to={`/Recipe/${cocktail.name}`}>
               <DrinkCard cocktail={cocktail} />
             </Link>
             <p class="unsave-button"><UnsaveButton name={cocktail.name} /></p>
-          </pre>
+          </div>
         )}
       </div>
     </div>
