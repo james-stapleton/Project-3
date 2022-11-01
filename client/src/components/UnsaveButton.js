@@ -17,6 +17,7 @@ export default function SaveButton(props) {
         let cocktail = props.name;
         console.log(cocktail);
         unsave({variables: {email: email,name: cocktail}})
+        window.location.reload();
       }
 
     return (

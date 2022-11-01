@@ -30,6 +30,8 @@ const typeDefs = gql`
     avgRating: Float
     image: String
     videoID: String
+    searchName: String
+    searchIngredient: String
   }
 
   input CocktailInput {
@@ -64,6 +66,7 @@ const typeDefs = gql`
     userID(_id: ID!): Users
     cocktails: [Cocktails]
     cocktail(name: String!): Cocktails
+    cocktailCard(name: String!): Cocktails
     userEmail(email: String!): Users
     cocktailByIng(string: String!): [Cocktails]
     cocktailRating(name: String!): Cocktails 
@@ -76,7 +79,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     updateUser(_id: ID!, args: UserInput): Users
     deleteUser(_id: ID!): Users
-    createCocktail(name: String!, ingredients: String!, instructions: String!, image: String): Cocktails
+    createCocktail(name: String!, ingredients: String!, instructions: String!, image: String, searchName: String, searchIngredient: String): Cocktails
     updateCocktail(_id: ID!, args: CocktailUpdate): Cocktails
     deleteCocktail(_id: ID!): Cocktails
     saveCocktail(email: String, cocktails: CocktailInput): Users

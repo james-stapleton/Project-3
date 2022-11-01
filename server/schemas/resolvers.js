@@ -22,10 +22,13 @@ const resolvers = {
       return Cocktails.find({}).sort({views: -1});
     },
     cocktail: async (parent, { name }) => {
+      return Cocktails.findOne({ searchName: name.toLowerCase() });
+    },
+    cocktailCard: async (parent, { name }) => {
       return Cocktails.findOne({ name: name });
     },
     cocktailByIng: async (parent, { string }) => {
-      return Cocktails.find({ ingredients: { $regex: string } }).sort({views: -1});
+      return Cocktails.find({ searchIngredient: { $regex: string.toLowerCase() } }).sort({views: -1});
     },
     // get the aray of ratings for a cocktail
     cocktailRating: async (parent, { name }) => {

@@ -10,6 +10,7 @@ import "./Recipe.css";
 export default function Recipe(props) {
 
   const { name } = useParams();
+  console.log("Cocktail name from paramms: ",name)
   const [rated, setRated] = React.useState('');
 
   function handleRating(userRating) {
@@ -18,7 +19,7 @@ export default function Recipe(props) {
 
   const GET_COCKTAIL = gql`
     query Cocktails($name: String!) {
-      cocktail(name: $name) {
+      cocktailCard(name: $name) {
         name
         ingredients
         instructions
@@ -50,15 +51,16 @@ export default function Recipe(props) {
   if (error) return <pre>{error.message}</pre>
 
   if (data) {
+    console.log(data.cocktailCard.name)
   }
 
   return (
     <div className="recipe-layout">
       <div className="recipe-card">
-        <DrinkCard rated={rated} cocktail={data.cocktail} />
+        <DrinkCard rated={rated} cocktail={data.cocktailCard} />
         <Rating rated={rated} setRating={handleRating} name={name} />
-        <SaveButton name={data.cocktail.name} />
-        <Video name={name} videoID={data.cocktail.videoID} />
+        <SaveButton name={data.cocktailCard.name} />
+        <Video name={name} videoID={data.cocktailCard.videoID} />
         </div>
       </div>
   )
