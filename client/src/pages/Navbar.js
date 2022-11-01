@@ -20,15 +20,15 @@ const Navbar = () => {
       
     <nav className="navbar">
       <form className="container-fluid justify-content-md-center form-inline">
-        <div class="row bg-banner">
-          <div class="col image-container">
-            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" class="logo"/></a>
+        <div className="row bg-banner">
+          <div className="col image-container">
+            <a href="/"><img src="../Images/Logo_Finished.png" width="398" alt="Logo" className="logo"/></a>
           </div>
-          <div class="col page-buttons">
-            <Link reloadDocument to="/MostViewedDrinks" ><button class="blue-button" type="button">Most Viewed Cocktails</button></Link>
-            <Link reloadDocument to="/CocktailRankings"><button class="blue-button" type="button">Cocktail Rankings</button></Link>
-            <Link reloadDocument to="/SavedDrinks"><button class="blue-button" type="button">Saved Drinks</button></Link>
-            <Link to="/UploadDrink"><button class="blue-button" type="button">Upload Drink</button></Link>
+          <div className="col page-buttons">
+            <Link reloadDocument to="/MostViewedDrinks" ><button className="blue-button" type="button">Most Viewed Cocktails</button></Link>
+            <Link reloadDocument to="/CocktailRankings"><button className="blue-button" type="button">Cocktail Rankings</button></Link>
+            <Link reloadDocument to="/SavedDrinks"><button className="blue-button" type="button">Saved Drinks</button></Link>
+            <Link to="/UploadDrink"><button className="blue-button" type="button">Upload Drink</button></Link>
           </div>
           <div class="col login-buttons">
           <h6>Welcome {localName ? localName : "!"}</h6>
