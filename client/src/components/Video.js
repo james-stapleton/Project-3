@@ -18,6 +18,7 @@ export default function Video({name, videoID}) {
 
     let localvideoID = localStorage.getItem([name]);
     if (localvideoID && localvideoID.length > 0) {
+        console.log("rendering from local storage")
         return (
             <pre className="video-container">
             <YouTube videoId={localvideoID}/>
@@ -33,7 +34,8 @@ export default function Video({name, videoID}) {
         fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDnqR3K3X57AM3byrSumlR1nT2BXYn2FxM&q=${name}-cocktail&type=video&part=snippet`)
          .then((response) => response.json())
          .then((data) => {
-                console.log("data error : ",data.error.message)
+                console.log(data);
+                console.log(data.items[0].id.videoId)
                 let isFetched = true;
                 if (data.error) {
                     console.log("We're in the right place", videoID)
@@ -48,7 +50,8 @@ export default function Video({name, videoID}) {
                     // )
                 }
                 let fetchVideoID = '';
-                if (isFetched) {
+                if (isFetched = true) {
+                    console.log("fetched")
                     let fetchVideoID = data.items[0].id.videoId
            
                 console.log("id from fetch:", fetchVideoID)
@@ -61,7 +64,7 @@ export default function Video({name, videoID}) {
             updateVideo({variables: {name: name, videoId: `${fetchVideoID}`}}); //update the DB with the fetchVideo ID
 
             // ! Error handling in here somewhere. Not exactly sure how yet
-            }).catch((err) => console.log("Error message"));
+            }).catch((err) => console.log(err));
             localvideoID = localStorage.getItem([name]);
             console.log("Getting id from local storage at end of fetch function", localvideoID)
         }
