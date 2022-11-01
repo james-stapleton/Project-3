@@ -52,19 +52,16 @@ export default function Recipe(props) {
 
   if (data) {
     console.log(data.cocktailCard.name)
-
-    return (
-      <div class="recipe-layout">
-        <div class="recipe-card">
-          <DrinkCard rated={rated} cocktail={data.cocktailCard} />
-          <Rating rated={rated} setRating={handleRating} name={name} />
-          <SaveButton name={data.cocktailCard.name} />
-          <Video name={name} videoID={data.cocktailCard.videoID} />
-          </div>
-        </div>
-    )
-
-
   }
 
+  return (
+    <div className="recipe-layout">
+      <div className="recipe-card">
+        <DrinkCard rated={rated} cocktail={data.cocktail} />
+        <Rating rated={rated} setRating={handleRating} name={name} />
+        <SaveButton name={data.cocktail.name} />
+        <Video name={name} videoID={data.cocktail.videoID} />
+        </div>
+      </div>
+  )
 }

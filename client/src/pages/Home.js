@@ -29,7 +29,7 @@ const Home = () => {
        localStorage.setItem("name", username)
     }
     const localName = localStorage.getItem("name")
-    
+    if (localName && document.getElementById("login")) window.location.reload();
     
     return (
 <div>
