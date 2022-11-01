@@ -7,7 +7,6 @@
 
 
 #rankings-card {
-    /* max-width: 350px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,12 +14,14 @@
 
 #rankings {
     color: white;
+    font-size: 20px;
     display: flex;
     justify-content: center;
 }
 
 #rankings-card a {
     width:350px;
+    margin-bottom: 50px;
 }
 
 #rankings-card h1 {

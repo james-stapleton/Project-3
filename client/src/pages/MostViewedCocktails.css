@@ -1,14 +1,28 @@
-.most-viewed-card {
-    width: 350px;
+#most-viewed-layout{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.most-viewed-layout{
+#most-viewed-card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 #views {
     color: white;
+    font-size: 20px;
     display: flex;
     justify-content: center;
+}
+
+#most-viewed-card a {
+    width:350px;
+    margin-bottom: 50px;
+}
+
+#most-viewed-card h1 {
+    font-size: 30px;
 }

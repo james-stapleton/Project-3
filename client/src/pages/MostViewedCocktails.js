@@ -34,15 +34,17 @@ const MostViewedCocktails = () => {
   if (data) {
 
     return (
-      <div class="most-viewed-layout">
-        <div class="most-viewed-card">
-          <h1>Most Viewed Drinks</h1>
+      <div>
+        <h1>Most Viewed Drinks</h1>
+        <div id="most-viewed-layout">
+          <div id="most-viewed-card">
             {data.cocktails.map((cocktail) =>
               <Link key={cocktail.name} to={`/Recipe/${cocktail.name}`}>
+                <p id="views">Views: {cocktail.views}</p>
                 <DrinkCard cocktail={cocktail} />
-              <p id="views">Views: {cocktail.views}</p>
               </Link>
             )}
+          </div>
         </div>
       </div>
     )
