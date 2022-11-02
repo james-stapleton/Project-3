@@ -10,7 +10,7 @@
   border-radius: 8px;
   font-size: 14px;
   color: white;
-  border: 0;
+  border: 0px;
   margin: 2px;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -68,43 +68,49 @@ a:hover {
 
 @media screen and (max-width: 768px) {
 
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+  }
+
   .container-fluid {
     width: auto;
     background-image: none;
   }
 
   .page-buttons {
+    width: 100%;
     min-width: 0px;
     display: flex;
     align-items: center;
-    padding-left: 5px;
-    }
+    padding: 0px;
+  }
 
   .blue-button {
     height: auto;
     width: auto;
-    background-color: #62938F;
     border-radius: 0px;
-    font-size: 14px;
-    color: white;
     margin: 1px;
-    cursor: pointer;
-    transition-duration: 0.3s;
   }
 
   .image-container {
+    min-width: 100%;
     width: auto;
     margin-bottom: 10px;
+    /* justify-content: center; */
   }
+
+  /* .image-container a {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+  } */
 
   .login-buttons {
     width: auto;
   }
 
   .logo {
-    width: 360px;
-    margin-top: 10px;
-    margin-left: 0px;
-    align-items: center;
+    width: 350px;
   }
 }

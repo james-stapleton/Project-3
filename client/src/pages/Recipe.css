@@ -35,10 +35,28 @@
 
 #recipe-card {
     background-color: #D7B877;
-    width: 390px;
+    width: 96%;
     margin: 20px;
     border: 0px;
-    padding: 10px;
+    padding: 0px;
+    display:block;
+    flex-wrap: wrap;
+}
+#recipe-card-data h1 {
+    font-size: 30px;
+}
+
+#recipe-card .container {
+    padding: 0px;
+}
+
+#drink-info-container {
+    width: 300px;
+}
+
+#drink-image-container {
+    height: 300px;
+    width: 300px;
 }
     
 }
