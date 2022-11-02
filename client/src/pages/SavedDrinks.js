@@ -20,7 +20,7 @@ const SavedDrinks = () => {
   const { loading, data, error } = useQuery(SAVED_QUERY, { variables: { email: userEmail }, fetchPolicy: 'network-only' })
 
   if (loading) return "Loading...";
-  if (error) return `Please sign in to view your saved drinks`;
+  if (error) return <h4>Please sign in to view your saved drinks</h4>;
 
   console.log("data", data.userEmail.cocktails);
 

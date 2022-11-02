@@ -1,0 +1,23 @@
+#home-card {
+    /* background-color: #63261e; */
+    width: 780px;
+    border-radius: 12px;
+    margin: 0px;
+    /* border: 6px solid #D7B877; */
+    padding: 20px 0px ;
+}
+
+#home-layout{
+    display: flex;
+    justify-content: center;
+}
+
+#home-card h1 {
+    border-radius: 8px 8px 0px 0px;
+    margin-top: 20px;
+    /* background-color: #63261e; */
+}
+
+label {
+    display: block;
+}

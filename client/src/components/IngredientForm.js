@@ -47,7 +47,7 @@ query CocktailByIng($string: String!) {
     <div>
       <form id="search-ingredient-form">
         <label id="search-ingredient-label" htmlFor="search-input">
-          <h4 class="search-title">Search by ingredient:</h4>
+          <h5 class="search-title">Search by ingredient</h5>
         </label>
         <input
           id="search-ingredient-input"
@@ -59,6 +59,7 @@ query CocktailByIng($string: String!) {
         />
         <button onClick={handleSearch} className="search-button">Search</button>
       </form>
+        <br></br>
         {data ?
         
         data.cocktailByIng.map((cocktail) => {
@@ -69,6 +70,7 @@ query CocktailByIng($string: String!) {
             <Link to = {`/Recipe/${cocktail.name}`}>
              <DrinkCard cocktail = {cocktail} />
             </Link>
+        <br></br>
         </div>
       </div>
             )

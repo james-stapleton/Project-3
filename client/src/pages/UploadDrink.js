@@ -8,18 +8,21 @@ const UploadDrink = () => {
 
     const localName = localStorage.getItem("name")
     if (!localName) {
-        return `Please sign in to upload a drink`
+        return <h4>Please sign in to upload a drink</h4>
     }
 
     return (
         <div class="container">
             <div id="upload-drink-form">
-                <h1>Upload a Drink</h1>
-                <br></br>
-                <h4>Would you like to share your perfect concoction {localName}?</h4>
-                <br></br>
-                <div class="upload-form">
-                    <Form />
+                <div id="upload-layout">
+                    <div id="upload-card">
+                        <h1>Upload a Drink</h1>
+                        <h5>Would you like to share your perfect concoction, {localName}?</h5>
+                        <br></br>
+                        <div class="upload-form">
+                            <Form />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -177,7 +177,7 @@ export default function NameForm() {
     <div>
       <form id="search-city-form">
         <label id="search-city-label" htmlFor="search-input">
-          <h4 class="search-title">Search by city:</h4>
+          <h5 class="search-title">Search by city</h5>
         </label>
         <input
           id="search-city-input"
@@ -192,6 +192,7 @@ export default function NameForm() {
         </button>
             <h2 id="weather-message">{message}</h2>
       </form>
+        <br></br>
         {data ? (
     <div className="recipe-layout">
       <div className="recipe-card">
@@ -199,6 +200,7 @@ export default function NameForm() {
             <DrinkCard cocktail={data.cocktail} />
         </Link>
         </div>
+        <br></br>
       </div>) : (
           <p></p>
         )}
