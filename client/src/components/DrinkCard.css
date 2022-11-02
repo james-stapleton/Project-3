@@ -5,7 +5,7 @@
     border-radius: 12px;
     padding-bottom: 18px;
     margin: 10px;
-    font-weight:;
+    font-weight: 600;
 }
 
 h1 {
@@ -35,9 +35,11 @@ h4 {
         background-color: #D7B877;
         color: #332F2E;
         border: 0px;
-        border-radius: 0px;
+        border-radius: 12px;
         padding-bottom: 20px;
         margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
 }
