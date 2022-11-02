@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import "./Login.css";
 
 import Auth from '../utils/auth';
 
@@ -44,8 +45,8 @@ const Login = (props) => {
 
   return (
     <main>
-    <div class="recipe-layout">
-      <div class="recipe-card">
+    <div id="login-layout">
+      <div id="login-card">
           <h1>Login</h1>
           <div>
             {data ? (

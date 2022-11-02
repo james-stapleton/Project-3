@@ -1,14 +1,50 @@
-#rankings-card {
-    width: 350px;
+#rankings-layout {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#rankings-layout{
+
+#rankings-card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 #rankings {
     color: white;
+    font-size: 20px;
     display: flex;
     justify-content: center;
+}
+
+#rankings-card a {
+    transition: transform .2s;
+    width:350px;
+    margin-bottom: 50px;
+}
+
+#rankings-card h1 {
+    border-radius: 8px 8px 0px 0px;
+    /* color: #332F2E;
+    background-color: #D7B877; */
+    font-size: 30px;
+}
+
+#recipe-card-data {
+    margin-top: 0px;
+}
+
+#recipe-card-data h1 {
+    margin-top: 0px;
+}
+
+#rankings-card img {
+    border-radius: 0px 0px 8px 8px;
+}
+
+#rankings-card a:hover {
+    transform: scale(.975);
 }

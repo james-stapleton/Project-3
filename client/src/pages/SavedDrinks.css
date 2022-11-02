@@ -1,4 +1,4 @@
-#most-viewed-layout{
+#saved-layout{
     height: auto;
     width: 100%;
     display: flex;
@@ -6,34 +6,30 @@
     justify-content: center;
 }
 
-#most-viewed-card {
+#saved-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#views {
-    color: white;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-#most-viewed-card a {
-    transition: transform .2s;
-    width:350px;
+#saved-data {
+    width: 350px;
     margin-bottom: 50px;
 }
 
-#most-viewed-card h1 {
+#saved-card h1 {
     border-radius: 8px 8px 0px 0px;
     font-size: 30px;
 }
 
-#most-viewed-card img {
+#saved-card img {
     border-radius: 0px 0px 8px 8px;
 }
 
-#most-viewed-card a:hover {
+#saved-link {
+    transition: transform .2s;
+}
+
+#saved-link:hover {
     transform: scale(.975);
 }

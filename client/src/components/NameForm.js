@@ -47,7 +47,7 @@ export default function NameForm() {
     <div>
       <form id="search-name-form">
         <label id="search-name-label" htmlFor="search-input">
-          <h4 class="search-title">Search by name:</h4>
+          <h5 class="search-title">Search by name</h5>
         </label>
         <input
           id="search-name-input"
@@ -61,6 +61,7 @@ export default function NameForm() {
           Search
         </button>
       </form>
+        <br></br>
       {data ? (
         <div className="recipe-layout">
           <div className="recipe-card">
@@ -68,6 +69,7 @@ export default function NameForm() {
               <DrinkCard cocktail={data?.cocktail} />
             </Link>
           </div>
+        <br></br>
         </div>
       ) : (null
 

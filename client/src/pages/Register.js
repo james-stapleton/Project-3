@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../utils/mutations';
+import "./Register.css";
 
 import Auth from '../utils/auth';
 
@@ -42,8 +43,8 @@ const Register = () => {
 
   return (
     <main>
-      <div class="recipe-layout">
-        <div class="recipe-card">
+      <div id="register-layout">
+        <div id="register-card">
           <h1>Sign Up</h1>
           <br></br>
           <div>
